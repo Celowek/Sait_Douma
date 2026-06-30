@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Культ Вечного Рая — Главная</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="snow-container"></div>
+
+    <div class="sidebar">
+        <a class="sidebar-item active-nav" href="index.html">
+            <i class="fa-solid fa-house"></i>
+            <span>Главная</span>
+        </a>
+        <a class="sidebar-item" href="rank.html">
+            <i class="fa-solid fa-chart-line"></i>
+            <span>Система повышения</span>
+        </a>
+        <a class="sidebar-item" href="blood.html">
+            <i class="fa-solid fa-fire-flame-curved"></i>
+            <span>Магия крови</span>
+        </a>
+        <a class="sidebar-item" href="events.html">
+            <i class="fa-solid fa-star"></i>
+            <span>События</span>
+        </a>
+        <a class="sidebar-item" href="prayers.html">
+            <i class="fa-solid fa-scroll"></i>
+            <span>Молитвы</span>
+        </a>
+    </div>
+
+    <div class="main-container">
+        <div class="main-header">Культ Вечного Рая</div>
+        
+        <div class="hero-section">
+            
+            <div class="info-textbox">
+                <strong>Информация о Культе:</strong><br>
+                Культ вечного рая - это отряд демонов что работают в культе вечного рая и занимаются распространением своей веры под руководством своей смотрящей высшей луны.
+            </div>
+            
+            <div class="server-ip-box" id="ipBox" onclick="copyIP()">
+                <i class="fa-solid fa-server"></i>
+                <span id="ipText">-------</span>
+            </div>
+        </div>
+
+        <div class="cards-grid">
+            
+            <div class="card">
+                <div>
+                    <i class="fa-solid fa-chart-line"></i>
+                    <h3>Система повышения</h3>
+                    <p>Узнайте все этапы развития, выполняйте задания и продвигайтесь по рангам вверх.</p>
+                </div>
+                <a href="rank.html" class="card-btn">Изучить</a>
+            </div>
+
+            <div class="card">
+                <div>
+                    <i class="fa-solid fa-fire-flame-curved"></i>
+                    <h3>Магия крови</h3>
+                    <p>Откройте в себе скрытые демонические техники и изучите могущественные стили боя.</p>
+                </div>
+                <a href="blood.html" class="card-btn">Изучить</a>
+            </div>
+
+            <div class="card">
+                <div>
+                    <i class="fa-solid fa-star"></i>
+                    <h3>События</h3>
+                    <p>Различные активности для культа, разного характера: развлекательные и ответственные.
+                </div>
+                <a href="events.html" class="card-btn">Изучить</a>
+            </div>
+
+            <div class="card">
+                <div>
+                    <i class="fa-solid fa-scroll"></i>
+                    <h3>Молитвы</h3>
+                    <p>Обратитесь к высшим силам для получения случайных благословений и редких предметов.</p>
+                </div>
+                <a href="prayers.html" class="card-btn">Изучить</a>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
