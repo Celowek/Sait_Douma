@@ -2,21 +2,20 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Магия крови — Доума</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-
-<div class="snowflakes" aria-hidden="true">
-    <div class="snowflake">❅</div> <div class="snowflake">❆</div> <div class="snowflake">❅</div>
-    <div class="snowflake">❆</div> <div class="snowflake">❅</div> <div class="snowflake">❆</div>
-    <div class="snowflake">❅</div> <div class="snowflake">❆</div> <div class="snowflake">❅</div>
-</div>
-
+<div id="snow-container"></div>
 
 <nav class="sidebar">
+    <div class="sidebar-logo">
+        <i class="fa-solid fa-snowflake"></i>
+        <span>Вечный Рай</span>
+    </div>
     <a class="sidebar-item" href="index.html"><i class="fa-solid fa-house"></i> <span>Главная</span></a>
     <a class="sidebar-item" href="rank.html"><i class="fa-solid fa-chart-line"></i> <span>Система повышения</span></a>
     <a class="sidebar-item active-nav" href="blood.html"><i class="fa-solid fa-fire-flame-curved"></i> <span>Магия крови</span></a>
@@ -24,103 +23,147 @@
     <a class="sidebar-item" href="prayers.html"><i class="fa-solid fa-scroll"></i> <span>Молитвы</span></a>
 </nav>
 
-
 <main class="main-container">
     
+    <div class="cult-badge"><i class="fa-solid fa-snowflake"></i> Демоническое искусство</div>
     <h1 class="main-title">МАГИЯ ДЕМОНИЧЕСКОЙ КРОВИ</h1>
     <div class="page-subtitle">Ледяные техники Высшей Луны Доумы для Культа Вечного Рая</div>
 
-
-    <div class="blood-arts-list">
-        
-<div class="blood-art-card">
-    <img class="blood-art-img" src="images/ice-lotus.png" alt="Ледяные лотосы">
-    <div class="blood-art-info">
-        <h3 class="blood-art-name">Ледяные лотосы</h3>
-        <p class="blood-art-desc">Создание нескольких ледяных лотосов из плоти и крови, которые выпускают метель из острых как бритва лепестков. Способны разорвать плоть противника на расстоянии.</p>
+    <div class="view-switcher">
+        <button class="view-btn active" onclick="setBloodView('list', this)">
+            <i class="fa-solid fa-bars"></i> Подробный список
+        </button>
+        <button class="view-btn" onclick="setBloodView('grid', this)">
+            <i class="fa-solid fa-grip"></i> Сетка карточек
+        </button>
     </div>
-</div>
 
-
+    <div class="blood-arts-list" id="bloodArtsList">
+        
+        <!-- 1. Ледяные лотосы -->
         <div class="blood-art-card">
-            <img class="blood-art-img" src="https://static.wikia.nocookie.net/kimetsu-no-yaiba/images/b/b8/Barren_Hanging_Garden.png/revision/latest/scale-to-width-down/1000?cb=20200409013808" alt="Увядшие висячие сады">
+            <img class="blood-art-img" data-name="ice-lotus" src="images/ice-lotus.png" alt="Ледяные лотосы">
             <div class="blood-art-info">
+                <span class="blood-art-number">Техника I</span>
+                <h3 class="blood-art-name">Ледяные лотосы</h3>
+                <p class="blood-art-desc">Создание нескольких ледяных лотосов из плоти и крови, которые выпускают метель из острых как бритва лепестков. Способны разорвать плоть противника на расстоянии.</p>
+            </div>
+        </div>
+
+        <!-- 2. Увядшие висячие сады -->
+        <div class="blood-art-card">
+            <img class="blood-art-img" data-name="withered-hanging-gardens" src="images/withered-hanging-gardens.png" alt="Увядшие висячие сады">
+            <div class="blood-art-info">
+                <span class="blood-art-number">Техника II</span>
                 <h3 class="blood-art-name">Увядшие висячие сады</h3>
                 <p class="blood-art-desc">Серия из множества стремительных и яростных ударов веерами, которые оставляют за собой шлейфы из ледяных лепестков лотоса, атакуя врага со всех сторон одновременно.</p>
             </div>
         </div>
 
-
+        <!-- 3. Замораживающие облака -->
         <div class="blood-art-card">
-            <img class="blood-art-img" src="https://static.wikia.nocookie.net/kimetsu-no-yaiba/images/0/0c/Freezing_Clouds.png/revision/latest/scale-to-width-down/1000?cb=20200409013947" alt="Замораживающие облака">
+            <img class="blood-art-img" data-name="freezing-clouds" src="images/freezing-clouds.png" alt="Замораживающие облака">
             <div class="blood-art-info">
+                <span class="blood-art-number">Техника III</span>
                 <h3 class="blood-art-name">Замораживающие облака</h3>
                 <p class="blood-art-desc">Взмах вееров создаёт густой туман из мельчайших ледяных частиц. Любой, кто вдохнет этот туман, подвергается мгновенному разрушению клеток легких и теряет способность дышать.</p>
             </div>
         </div>
 
-
+        <!-- 4. Лозы лотосов -->
         <div class="blood-art-card">
-            <img class="blood-art-img" src="https://static.wikia.nocookie.net/kimetsu-no-yaiba/images/3/33/Lotus_Vines.png/revision/latest/scale-to-width-down/1000?cb=20200409014106" alt="Лозы лотосов">
+            <img class="blood-art-img" data-name="lotus-vines" src="images/lotus-vines.png" alt="Лозы лотосов">
             <div class="blood-art-info">
+                <span class="blood-art-number">Техника IV</span>
                 <h3 class="blood-art-name">Лозы лотосов</h3>
                 <p class="blood-art-desc">Выращивание длинных ледяных лоз, усыпанных лотосами, которые быстро вытягиваются в сторону цели. Они могут захватывать, сковывать движения или сбрасывать врагов с высоты.</p>
             </div>
         </div>
 
-
+        <!-- 5. Белые принцессы метели -->
         <div class="blood-art-card">
-            <img class="blood-art-img" src="https://static.wikia.nocookie.net/kimetsu-no-yaiba/images/f/ff/Cold_White_Princesses.png/revision/latest/scale-to-width-down/1000?cb=20200409013848" alt="Белые принцессы метели">
+            <img class="blood-art-img" data-name="white-blizzard-princesses" src="images/white-blizzard-princesses.png" alt="Белые принцессы метели">
             <div class="blood-art-info">
+                <span class="blood-art-number">Техника V</span>
                 <h3 class="blood-art-name">Белые принцессы метели</h3>
                 <p class="blood-art-desc">Создание двух ледяных гуманоидных фигур принцесс, которые способны выдыхать мощные потоки ледяного ветра, замораживая обширную область перед собой.</p>
             </div>
         </div>
 
-
+        <!-- 6. Зимние сосульки -->
         <div class="blood-art-card">
-            <img class="blood-art-img" src="https://static.wikia.nocookie.net/kimetsu-no-yaiba/images/1/12/Wintry_Icicles.png/revision/latest?cb=20200409014446" alt="Зимние сосульки">
+            <img class="blood-art-img" data-name="winter-icicles" src="images/winter-icicles.jpg" alt="Зимние сосульки">
             <div class="blood-art-info">
+                <span class="blood-art-number">Техника VI</span>
                 <h3 class="blood-art-name">Зимние сосульки</h3>
                 <p class="blood-art-desc">Призыв многочисленных острых ледяных копий-сосулек прямо над головой противника. Они обрушиваются вниз с огромной скоростью, пробивая любую защиту.</p>
             </div>
         </div>
 
-
+        <!-- 7. Развеянные лотосы -->
         <div class="blood-art-card">
-            <img class="blood-art-img" src="https://static.wikia.nocookie.net/kimetsu-no-yaiba/images/a/a7/Scattering_Lotuses.png/revision/latest/scale-to-width-down/1000?cb=20200409014400" alt="Развеянные лотосы">
+            <img class="blood-art-img" data-name="scattered-lotus" src="images/scattered-lotus.png" alt="Развеянные лотосы">
             <div class="blood-art-info">
+                <span class="blood-art-number">Техника VII</span>
                 <h3 class="blood-art-name">Развеянные лотосы</h3>
                 <p class="blood-art-desc">Сверхбыстрый взмах веером, порождающий шквал летящих ледяных лепестков. Техника бьет по огромной площади, превращая поле боя в смертоносную снежную бурю.</p>
             </div>
         </div>
 
-
+        <!-- 8. Кристальное божественное дитя -->
         <div class="blood-art-card">
-            <img class="blood-art-img" src="https://static.wikia.nocookie.net/kimetsu-no-yaiba/images/b/bb/Crystalline_Divine_Child.png/revision/latest/scale-to-width-down/1000?cb=20200409013919" alt="Кристальное божественное дитя">
+            <img class="blood-art-img" data-name="crystal-divine-child" src="images/crystal-divine-child.png" alt="Кристальное божественное дитя">
             <div class="blood-art-info">
+                <span class="blood-art-number">Техника VIII</span>
                 <h3 class="blood-art-name">Кристальное божественное дитя</h3>
                 <p class="blood-art-desc">Создание миниатюрных ледяных статуй самого себя. Эти куклы способны самостоятельно использовать все техники Магии Крови Доумы и записывать информацию о силе врага.</p>
             </div>
         </div>
 
-
+        <!-- 9. Замёрзшие воды — Бодхисаттва с кувшинками -->
         <div class="blood-art-card">
-            <img class="blood-art-img" src="https://static.wikia.nocookie.net/kimetsu-no-yaiba/images/f/f7/Rime_Waterlily_Bodhisattva.png/revision/latest/scale-to-width-down/1000?cb=20200409014232" alt="Замёрзшие воды — Бодхисаттва с кувшинками">
+            <img class="blood-art-img" data-name="frozen-bodhisattva" src="images/frozen-bodhisattva.png" alt="Замёрзшие воды — Бодхисаттва с кувшинками">
             <div class="blood-art-info">
+                <span class="blood-art-number">Высшая техника IX</span>
                 <h3 class="blood-art-name">Замёрзшие воды — Бодхисаттва с кувшинками</h3>
                 <p class="blood-art-desc">Высшая техника. Создание исполинской ледяной статуи Бодхисаттвы. Она способна мгновенно заморозить всё живое вокруг одним дыханием и наносить сокрушительные удары огромными руками.</p>
             </div>
         </div>
 
-
     </div>
-
 
 </main>
 
+<script src="script.js"></script>
+<script>
+// Автоматический поиск картинок по всем возможным расширениям и папкам
+document.querySelectorAll('.blood-art-img').forEach(img => {
+    const baseName = img.getAttribute('data-name');
+    if (!baseName) return;
 
+    const candidates = [
+        `images/${baseName}.png`,
+        `images/${baseName}.jpg`,
+        `images/${baseName}.webp`,
+        `images/${baseName}.jpeg`,
+        `${baseName}.png`,
+        `${baseName}.jpg`,
+        `${baseName}.webp`,
+        `${baseName}.jpeg`,
+        `images/${baseName}.jpg.jpg`,
+        `images/${baseName}.png.png`
+    ];
+
+    let index = 0;
+    img.onerror = function() {
+        index++;
+        if (index < candidates.length) {
+            img.src = candidates[index];
+        } else {
+            img.onerror = null;
+        }
+    };
+});
+</script>
 </body>
 </html>
-
-

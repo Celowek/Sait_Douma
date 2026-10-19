@@ -2,19 +2,20 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <title>События отряда</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>События отряда — Культ Вечного Рая</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<div class="snowflakes" aria-hidden="true">
-    <div class="snowflake">❅</div> <div class="snowflake">❆</div> <div class="snowflake">❅</div>
-    <div class="snowflake">❆</div> <div class="snowflake">❅</div> <div class="snowflake">❆</div>
-    <div class="snowflake">❅</div> <div class="snowflake">❆</div> <div class="snowflake">❅</div>
-</div>
+<div id="snow-container"></div>
 
 <nav class="sidebar">
+    <div class="sidebar-logo">
+        <i class="fa-solid fa-snowflake"></i>
+        <span>Вечный Рай</span>
+    </div>
     <a class="sidebar-item" href="index.html"><i class="fa-solid fa-house"></i> <span>Главная</span></a>
     <a class="sidebar-item" href="rank.html"><i class="fa-solid fa-chart-line"></i> <span>Система повышения</span></a>
     <a class="sidebar-item" href="blood.html"><i class="fa-solid fa-fire-flame-curved"></i> <span>Магия крови</span></a>
@@ -24,6 +25,7 @@
 
 <main class="main-container">
     
+    <div class="cult-badge"><i class="fa-solid fa-calendar-check"></i> Активности Культа</div>
     <h1 class="main-title">СОБЫТИЯ ОТРЯДА</h1>
     <div class="page-subtitle">Специальные миссии и активности для членов Культа</div>
 
@@ -39,6 +41,6 @@
 
 </main>
 
+<script src="script.js"></script>
 </body>
 </html>
-

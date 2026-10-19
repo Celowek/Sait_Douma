@@ -2,23 +2,20 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <title>Система повышения</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Система повышения — Культ Вечного Рая</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<div class="snowflakes" aria-hidden="true">
-    <div class="snowflake">❅</div> <div class="snowflake">❆</div> <div class="snowflake">❅</div>
-    <div class="snowflake">❆</div> <div class="snowflake">❅</div> <div class="snowflake">❆</div>
-    <div class="snowflake">❅</div> <div class="snowflake">❆</div> <div class="snowflake">❅</div>
-    <div class="snowflake">❆</div> <div class="snowflake">❅</div> <div class="snowflake">❆</div>
-    <div class="snowflake">❅</div> <div class="snowflake">❆</div> <div class="snowflake">❅</div>
-    <div class="snowflake">❆</div> <div class="snowflake">❅</div> <div class="snowflake">❆</div>
-    <div class="snowflake">❅</div> <div class="snowflake">❆</div>
-</div>
+<div id="snow-container"></div>
 
 <nav class="sidebar">
+    <div class="sidebar-logo">
+        <i class="fa-solid fa-snowflake"></i>
+        <span>Вечный Рай</span>
+    </div>
     <a class="sidebar-item" href="index.html"><i class="fa-solid fa-house"></i> <span>Главная</span></a>
     <a class="sidebar-item active-nav" href="rank.html"><i class="fa-solid fa-chart-line"></i> <span>Система повышения</span></a>
     <a class="sidebar-item" href="blood.html"><i class="fa-solid fa-fire-flame-curved"></i> <span>Магия крови</span></a>
@@ -28,13 +25,22 @@
 
 <main class="main-container">
     
-    <h1 class="main-title">СИСТЕМА ПОВЫШЕНИЯ</h1>
-    <div class="page-subtitle">От Новорожденного до Ёкая - по ступеням силы</div>
+    <div class="cult-badge"><i class="fa-solid fa-icicles"></i> Иерархия отряда</div>
+    <h1 class="main-title" id="ranks-section">СИСТЕМА ПОВЫШЕНИЯ</h1>
+    <div class="page-subtitle">От Новорожденного до Ёкая — по ступеням силы</div>
+
+    <!-- Быстрая навигация по странице -->
+    <div class="quick-nav">
+        <a href="#ranks-section" class="quick-nav-btn"><i class="fa-solid fa-layer-group"></i> Стоимость рангов</a>
+        <a href="#earn-section" class="quick-nav-btn"><i class="fa-solid fa-gem"></i> Получение льдинок</a>
+        <a href="#missions-section" class="quick-nav-btn"><i class="fa-solid fa-list-check"></i> Повышение по заданиям</a>
+    </div>
     
-    <!-- КАРТОЧКИ РАНГОВ И КД (УСЛОЖНЁННЫЕ ЛЬДИНКИ) -->
+    <!-- КАРТОЧКИ РАНГОВ И КД -->
     <div class="ranks-grid">
         <!-- Младший состав (КД 2 дня) -->
         <div class="rank-card">
+            <span class="rank-tier-tag tier-junior">Младший состав</span>
             <div class="card-icon"><i class="fa-solid fa-baby"></i></div>
             <div class="card-title">Новорожденный → Дзикини</div>
             <div class="card-points">15 льдинок</div>
@@ -43,6 +49,7 @@
         </div>
 
         <div class="rank-card">
+            <span class="rank-tier-tag tier-junior">Младший состав</span>
             <div class="card-icon"><i class="fa-solid fa-spaghetti-monster-flying"></i></div>
             <div class="card-title">Дзикини → Сюдзин</div>
             <div class="card-points">30 льдинок</div>
@@ -51,6 +58,7 @@
         </div>
 
         <div class="rank-card">
+            <span class="rank-tier-tag tier-junior">Младший состав</span>
             <div class="card-icon"><i class="fa-solid fa-crown"></i></div>
             <div class="card-title">Сюдзин → Гецуэй</div>
             <div class="card-points">45 льдинок</div>
@@ -59,6 +67,7 @@
         </div>
 
         <div class="rank-card">
+            <span class="rank-tier-tag tier-junior">Младший состав</span>
             <div class="card-icon"><i class="fa-solid fa-crown"></i></div>
             <div class="card-title">Гецуэй → Асура</div>
             <div class="card-points">60 льдинок</div>
@@ -68,6 +77,7 @@
 
         <!-- Средний состав (КД 4 дня) -->
         <div class="rank-card">
+            <span class="rank-tier-tag tier-middle">Средний состав</span>
             <div class="card-icon"><i class="fa-solid fa-ghost"></i></div>
             <div class="card-title">Асура → Кэкки</div>
             <div class="card-points">80 льдинок</div>
@@ -76,6 +86,7 @@
         </div>
 
         <div class="rank-card">
+            <span class="rank-tier-tag tier-middle">Средний состав</span>
             <div class="card-icon"><i class="fa-solid fa-bolt"></i></div>
             <div class="card-title">Кэкки → Сиро</div>
             <div class="card-points">100 льдинок</div>
@@ -84,6 +95,7 @@
         </div>
 
         <div class="rank-card">
+            <span class="rank-tier-tag tier-middle">Средний состав</span>
             <div class="card-icon"><i class="fa-solid fa-shield-halved"></i></div>
             <div class="card-title">Сиро → Ракан</div>
             <div class="card-points">125 льдинок</div>
@@ -92,6 +104,7 @@
         </div>
 
         <div class="rank-card">
+            <span class="rank-tier-tag tier-middle">Средний состав</span>
             <div class="card-icon"><i class="fa-solid fa-scroll"></i></div>
             <div class="card-title">Ракан → Ониби</div>
             <div class="card-points">150 льдинок</div>
@@ -101,6 +114,7 @@
 
         <!-- Старший состав (КД 7 дней) -->
         <div class="rank-card">
+            <span class="rank-tier-tag tier-senior">Старший состав</span>
             <div class="card-icon"><i class="fa-solid fa-leaf"></i></div>
             <div class="card-title">Ониби → Синта</div>
             <div class="card-points">200 льдинок</div>
@@ -109,6 +123,7 @@
         </div>
 
         <div class="rank-card">
+            <span class="rank-tier-tag tier-senior">Старший состав</span>
             <div class="card-icon"><i class="fa-solid fa-skull"></i></div>
             <div class="card-title">Синта → Ёкай</div>
             <div class="card-points">300 льдинок</div>
@@ -117,8 +132,7 @@
         </div>
     </div>
 
-    <hr class="section-divider">
-    <hr class="section-divider">
+    <hr class="section-divider" id="earn-section">
 
     <!-- СПОСОБЫ ПОЛУЧЕНИЯ ЛЬДИНОК -->
     <h2 class="main-title content-spacing">СПОСОБЫ ПОЛУЧЕНИЯ ЛЬДИНОК</h2>
@@ -190,159 +204,163 @@
         </div>
     </div>
 
-    <hr class="section-divider">
-    <hr class="section-divider">
+    <hr class="section-divider" id="missions-section">
 
     <!-- СЕКЦИЯ: ПОВЫШЕНИЕ С ПОМОЩЬЮ ЗАДАНИЙ -->
-<!-- СЕКЦИЯ: ПОВЫШЕНИЕ С ПОМОЩЬЮ ЗАДАНИЙ -->
     <h2 class="main-title content-spacing">ПОВЫШЕНИЕ С ПОМОЩЬЮ ЗАДАНИЙ</h2>
     <div class="page-subtitle">Выполняйте фиксированные цепочки миссий для получения новых рангов</div>
 
-    <div class="tasks-list-wide" style="margin-top: 35px; display: flex; flex-direction: column; gap: 20px;">
+    <div class="tasks-list-wide">
         
-        <!-- МЛАДШИЙ СОСТАВ (Требования отряда) -->
-        <div class="task-card-wide" style="border-left: 5px solid #8be9fd; padding: 25px; min-height: auto;">
-            <div class="task-wide-info" style="width: 100%;">
-                <div class="task-wide-name" style="color: #8be9fd; font-size: 1.3rem; margin-bottom: 12px; font-weight: 700; letter-spacing: 0.5px;">
+        <!-- МЛАДШИЙ СОСТАВ -->
+        <div class="task-card-wide mission-card mission-junior">
+            <div class="task-wide-info">
+                <div class="task-wide-name mission-title-junior">
                     <i class="fa-solid fa-angle-right"></i> [Младший состав] Новорожденный → Дзикини
                 </div>
-                <div class="task-wide-desc" style="font-size: 1.05rem; line-height: 1.6; color: #cbd5e1;">
-                    <div style="margin-bottom: 5px;"><i class="fa-solid fa-crosshairs" style="color: #ff5555; width: 20px;"></i> Убить 1 истребителя</div>
-                    <div><i class="fa-solid fa-dumbbell" style="color: #50b4f2; width: 20px;"></i> Пройти 1 тренировку</div>
+                <div class="mission-list">
+                    <div class="mission-item"><i class="fa-solid fa-crosshairs" style="color: #ff5555;"></i> Убить 1 истребителя</div>
+                    <div class="mission-item"><i class="fa-solid fa-dumbbell" style="color: #50b4f2;"></i> Пройти 1 тренировку</div>
                 </div>
             </div>
         </div>
 
-        <div class="task-card-wide" style="border-left: 5px solid #8be9fd; padding: 25px; min-height: auto;">
-            <div class="task-wide-info" style="width: 100%;">
-                <div class="task-wide-name" style="color: #8be9fd; font-size: 1.3rem; margin-bottom: 12px; font-weight: 700; letter-spacing: 0.5px;">
+        <div class="task-card-wide mission-card mission-junior">
+            <div class="task-wide-info">
+                <div class="task-wide-name mission-title-junior">
                     <i class="fa-solid fa-angle-right"></i> [Младший состав] Дзикини → Сюдзин
                 </div>
-                <div class="task-wide-desc" style="font-size: 1.05rem; line-height: 1.6; color: #cbd5e1;">
-                    <div style="margin-bottom: 5px;"><i class="fa-solid fa-dumbbell" style="color: #50b4f2; width: 20px;"></i> Пройти 1 тренировку</div>
-                    <div style="margin-bottom: 5px;"><i class="fa-solid fa-clipboard-list" style="color: #ffb86c; width: 20px;"></i> Выполнить 2 легких поручения</div>
-                    <div><i class="fa-solid fa-scroll" style="color: #bd93f9; width: 20px;"></i> Сдать «Кровные Обязанности»</div>
+                <div class="mission-list">
+                    <div class="mission-item"><i class="fa-solid fa-dumbbell" style="color: #50b4f2;"></i> Пройти 1 тренировку</div>
+                    <div class="mission-item"><i class="fa-solid fa-clipboard-list" style="color: #ffb86c;"></i> Выполнить 2 легких поручения</div>
+                    <div class="mission-item"><i class="fa-solid fa-scroll" style="color: #bd93f9;"></i> Сдать «Кровные Обязанности»</div>
                 </div>
             </div>
         </div>
 
-        <div class="task-card-wide" style="border-left: 5px solid #8be9fd; padding: 25px; min-height: auto;">
-            <div class="task-wide-info" style="width: 100%;">
-                <div class="task-wide-name" style="color: #8be9fd; font-size: 1.3rem; margin-bottom: 12px; font-weight: 700; letter-spacing: 0.5px;">
+        <div class="task-card-wide mission-card mission-junior">
+            <div class="task-wide-info">
+                <div class="task-wide-name mission-title-junior">
                     <i class="fa-solid fa-angle-right"></i> [Младший состав] Сюдзин → Гецуэй
                 </div>
-                <div class="task-wide-desc" style="font-size: 1.05rem; line-height: 1.6; color: #cbd5e1;">
-                    <div style="margin-bottom: 5px;"><i class="fa-solid fa-crosshairs" style="color: #ff5555; width: 20px;"></i> Убить 3 истребителей</div>
-                    <div style="margin-bottom: 5px;"><i class="fa-solid fa-clipboard-list" style="color: #ffb86c; width: 20px;"></i> Выполнить 3 средних поручений</div>
-                    <div style="margin-bottom: 5px;"><i class="fa-solid fa-dumbbell" style="color: #50b4f2; width: 20px;"></i> Пройти 1 тренировку</div>
-                    <div><i class="fa-solid fa-flag" style="color: #f1fa8c; width: 20px;"></i> Захватить 2 точки</div>
+                <div class="mission-list">
+                    <div class="mission-item"><i class="fa-solid fa-crosshairs" style="color: #ff5555;"></i> Убить 3 истребителей</div>
+                    <div class="mission-item"><i class="fa-solid fa-clipboard-list" style="color: #ffb86c;"></i> Выполнить 3 средних поручений</div>
+                    <div class="mission-item"><i class="fa-solid fa-dumbbell" style="color: #50b4f2;"></i> Пройти 1 тренировку</div>
+                    <div class="mission-item"><i class="fa-solid fa-flag" style="color: #f1fa8c;"></i> Захватить 2 точки</div>
                 </div>
             </div>
         </div>
 
-        <div class="task-card-wide" style="border-left: 5px solid #8be9fd; padding: 25px; min-height: auto;">
-            <div class="task-wide-info" style="width: 100%;">
-                <div class="task-wide-name" style="color: #8be9fd; font-size: 1.3rem; margin-bottom: 12px; font-weight: 700; letter-spacing: 0.5px;">
+        <div class="task-card-wide mission-card mission-junior">
+            <div class="task-wide-info">
+                <div class="task-wide-name mission-title-junior">
                     <i class="fa-solid fa-angle-right"></i> [Младший состав] Гецуэй → Асура
                 </div>
-                <div class="task-wide-desc" style="font-size: 1.05rem; line-height: 1.6; color: #cbd5e1;">
-                    <div style="margin-bottom: 5px;"><i class="fa-solid fa-dumbbell" style="color: #50b4f2; width: 20px;"></i> Пройти 2 тренировки</div>
-                    <div style="margin-bottom: 5px;"><i class="fa-solid fa-crosshairs" style="color: #ff5555; width: 20px;"></i> Убить 6 истребителей</div>
-                    <div style="margin-bottom: 5px;"><i class="fa-solid fa-flag" style="color: #f1fa8c; width: 20px;"></i> Захватить 4 точки</div>
-                    <div><i class="fa-solid fa-clipboard-list" style="color: #ffb86c; width: 20px;"></i> Выполнить 1 среднее поручение</div>
+                <div class="mission-list">
+                    <div class="mission-item"><i class="fa-solid fa-dumbbell" style="color: #50b4f2;"></i> Пройти 2 тренировки</div>
+                    <div class="mission-item"><i class="fa-solid fa-crosshairs" style="color: #ff5555;"></i> Убить 6 истребителей</div>
+                    <div class="mission-item"><i class="fa-solid fa-flag" style="color: #f1fa8c;"></i> Захватить 4 точки</div>
+                    <div class="mission-item"><i class="fa-solid fa-clipboard-list" style="color: #ffb86c;"></i> Выполнить 1 среднее поручение</div>
                 </div>
             </div>
         </div>
 
-        <!-- СРЕДНИЙ СОСТАВ (Неизмененные общие) -->
-        <div class="task-card-wide" style="border-left: 5px solid #ffb86c; padding: 25px; min-height: auto;">
-            <div class="task-wide-info" style="width: 100%;">
-                <div class="task-wide-name" style="color: #ffb86c; font-size: 1.3rem; margin-bottom: 12px; font-weight: 700; letter-spacing: 0.5px;">
+        <!-- СРЕДНИЙ СОСТАВ -->
+        <div class="task-card-wide mission-card mission-middle">
+            <div class="task-wide-info">
+                <div class="task-wide-name mission-title-middle">
                     <i class="fa-solid fa-angle-right"></i> [Средний состав] Асура → Кэкки
                 </div>
-                <div class="task-wide-desc" style="font-size: 1.05rem; line-height: 1.6; color: #cbd5e1;">
-                    <div style="margin-bottom: 5px;"><i class="fa-solid fa-user-check" style="color: #50b4f2; width: 20px;"></i> Быть одобренным Инструктором / Старшим Инструктором / Луной</div>
-                    <div style="margin-bottom: 5px;"><i class="fa-solid fa-crosshairs" style="color: #ff5555; width: 20px;"></i> Убить 12 истребителей</div>
-                    <div style="margin-bottom: 5px;"><i class="fa-solid fa-flag" style="color: #f1fa8c; width: 20px;"></i> Захватить 10 точек</div>
-                    <div><i class="fa-solid fa-clipboard-list" style="color: #ffb86c; width: 20px;"></i> Выполнить 3 средних поручения</div>
+                <div class="mission-list">
+                    <div class="mission-item"><i class="fa-solid fa-user-check" style="color: #50b4f2;"></i> Быть одобренным Инструктором / Старшим Инструктором / Луной</div>
+                    <div class="mission-item"><i class="fa-solid fa-crosshairs" style="color: #ff5555;"></i> Убить 12 истребителей</div>
+                    <div class="mission-item"><i class="fa-solid fa-flag" style="color: #f1fa8c;"></i> Захватить 10 точек</div>
+                    <div class="mission-item"><i class="fa-solid fa-clipboard-list" style="color: #ffb86c;"></i> Выполнить 3 средних поручения</div>
                 </div>
             </div>
         </div>
 
-        <div class="task-card-wide" style="border-left: 5px solid #ffb86c; padding: 25px; min-height: auto;">
-            <div class="task-wide-info" style="width: 100%;">
-                <div class="task-wide-name" style="color: #ffb86c; font-size: 1.3rem; margin-bottom: 12px; font-weight: 700; letter-spacing: 0.5px;">
+        <div class="task-card-wide mission-card mission-middle">
+            <div class="task-wide-info">
+                <div class="task-wide-name mission-title-middle">
                     <i class="fa-solid fa-angle-right"></i> [Средний состав] Кэкки → Сиро
                 </div>
-                <div class="task-wide-desc" style="font-size: 1.05rem; line-height: 1.6; color: #cbd5e1;">
-                    <div style="margin-bottom: 5px;"><i class="fa-solid fa-crosshairs" style="color: #ff5555; width: 20px;"></i> Убить 17 истребителей</div>
-                    <div style="margin-bottom: 5px;"><i class="fa-solid fa-skull-crossbones" style="color: #bd93f9; width: 20px;"></i> Победить в дуэли демонов своего ранга (назначает Старший Инструктор / Луна)</div>
-                    <div style="margin-bottom: 5px;"><i class="fa-solid fa-award" style="color: #f1fa8c; width: 20px;"></i> Заработать похвалу Старшего Инструктора / Луны</div>
-                    <div><i class="fa-solid fa-clipboard-list" style="color: #ffb86c; width: 20px;"></i> Выполнить 4 средних поручения</div>
+                <div class="mission-list">
+                    <div class="mission-item"><i class="fa-solid fa-crosshairs" style="color: #ff5555;"></i> Убить 17 истребителей</div>
+                    <div class="mission-item"><i class="fa-solid fa-skull-crossbones" style="color: #bd93f9;"></i> Победить в дуэли демонов своего ранга (назначает Старший Инструктор / Луна)</div>
+                    <div class="mission-item"><i class="fa-solid fa-award" style="color: #f1fa8c;"></i> Заработать похвалу Старшего Инструктора / Луны</div>
+                    <div class="mission-item"><i class="fa-solid fa-clipboard-list" style="color: #ffb86c;"></i> Выполнить 4 средних поручения</div>
                 </div>
             </div>
         </div>
 
-        <div class="task-card-wide" style="border-left: 5px solid #ffb86c; padding: 25px; min-height: auto;">
-            <div class="task-wide-info" style="width: 100%;">
-                <div class="task-wide-name" style="color: #ffb86c; font-size: 1.3rem; margin-bottom: 12px; font-weight: 700; letter-spacing: 0.5px;">
+        <div class="task-card-wide mission-card mission-middle">
+            <div class="task-wide-info">
+                <div class="task-wide-name mission-title-middle">
                     <i class="fa-solid fa-angle-right"></i> [Средний состав] Сиро → Ракан
                 </div>
-                <div class="task-wide-desc" style="font-size: 1.05rem; line-height: 1.6; color: #cbd5e1;">
-                    <div style="margin-bottom: 5px;"><i class="fa-solid fa-crosshairs" style="color: #ff5555; width: 20px;"></i> Убить 25 истребителей</div>
-                    <div style="margin-bottom: 5px;"><i class="fa-solid fa-award" style="color: #f1fa8c; width: 20px;"></i> Заработать похвалу Старшего Инструктора / Луны 2 раза</div>
-                    <div style="margin-bottom: 5px;"><i class="fa-solid fa-skull-crossbones" style="color: #bd93f9; width: 20px;"></i> Победить в дуэли демонов своего ранга (назначает Старший Инструктор / Луна)</div>
-                    <div><i class="fa-solid fa-clipboard-list" style="color: #ffb86c; width: 20px;"></i> Выполнить 5 средних поручений</div>
+                <div class="mission-list">
+                    <div class="mission-item"><i class="fa-solid fa-crosshairs" style="color: #ff5555;"></i> Убить 25 истребителей</div>
+                    <div class="mission-item"><i class="fa-solid fa-award" style="color: #f1fa8c;"></i> Заработать похвалу Старшего Инструктора / Луны 2 раза</div>
+                    <div class="mission-item"><i class="fa-solid fa-skull-crossbones" style="color: #bd93f9;"></i> Победить в дуэли демонов своего ранга (назначает Старший Инструктор / Луна)</div>
+                    <div class="mission-item"><i class="fa-solid fa-clipboard-list" style="color: #ffb86c;"></i> Выполнить 5 средних поручений</div>
                 </div>
             </div>
         </div>
 
-        <div class="task-card-wide" style="border-left: 5px solid #ffb86c; padding: 25px; min-height: auto;">
-            <div class="task-wide-info" style="width: 100%;">
-                <div class="task-wide-name" style="color: #ffb86c; font-size: 1.3rem; margin-bottom: 12px; font-weight: 700; letter-spacing: 0.5px;">
+        <div class="task-card-wide mission-card mission-middle">
+            <div class="task-wide-info">
+                <div class="task-wide-name mission-title-middle">
                     <i class="fa-solid fa-angle-right"></i> [Средний состав] Ракан → Ониби
                 </div>
-                <div class="task-wide-desc" style="font-size: 1.05rem; line-height: 1.6; color: #cbd5e1;">
-                    <div style="margin-bottom: 5px;"><i class="fa-solid fa-skull" style="color: #ff5555; width: 20px;"></i> Убить 3 столпа</div>
-                    <div style="margin-bottom: 5px;"><i class="fa-solid fa-crosshairs" style="color: #ff5555; width: 20px;"></i> Убить 30 истребителей</div>
-                    <div style="margin-bottom: 5px;"><i class="fa-solid fa-file-invoice" style="color: #ff79c6; width: 20px;"></i> Выполнить 2 тяжелых поручения Старшего Инструктора / Луны</div>
-                    <div style="margin-bottom: 5px;"><i class="fa-solid fa-user-shield" style="color: #50b4f2; width: 20px;"></i> Получить одобрение Луны</div>
-                    <div><i class="fa-solid fa-clipboard-list" style="color: #ffb86c; width: 20px;"></i> Выполнить 6 средних поручений</div>
+                <div class="mission-list">
+                    <div class="mission-item"><i class="fa-solid fa-skull" style="color: #ff5555;"></i> Убить 3 столпа</div>
+                    <div class="mission-item"><i class="fa-solid fa-crosshairs" style="color: #ff5555;"></i> Убить 30 истребителей</div>
+                    <div class="mission-item"><i class="fa-solid fa-file-invoice" style="color: #ff79c6;"></i> Выполнить 2 тяжелых поручения Старшего Инструктора / Луны</div>
+                    <div class="mission-item"><i class="fa-solid fa-user-shield" style="color: #50b4f2;"></i> Получить одобрение Луны</div>
+                    <div class="mission-item"><i class="fa-solid fa-clipboard-list" style="color: #ffb86c;"></i> Выполнить 6 средних поручений</div>
                 </div>
             </div>
         </div>
 
-        <!-- СТАРШИЙ СОСТАВ (Неизмененные общие) -->
-        <div class="task-card-wide" style="border-left: 5px solid #ff5555; padding: 25px; min-height: auto;">
-            <div class="task-wide-info" style="width: 100%;">
-                <div class="task-wide-name" style="color: #ff5555; font-size: 1.3rem; margin-bottom: 12px; font-weight: 700; letter-spacing: 0.5px;">
+        <!-- СТАРШИЙ СОСТАВ -->
+        <div class="task-card-wide mission-card mission-senior">
+            <div class="task-wide-info">
+                <div class="task-wide-name mission-title-senior">
                     <i class="fa-solid fa-angle-right"></i> [Старший состав] Ониби → Синта
                 </div>
-                <div class="task-wide-desc" style="font-size: 1.05rem; line-height: 1.6; color: #cbd5e1;">
-                    <div style="margin-bottom: 5px;"><i class="fa-solid fa-skull" style="color: #ff5555; width: 20px;"></i> Убить 5 столпов</div>
-                    <div style="margin-bottom: 5px;"><i class="fa-solid fa-crosshairs" style="color: #ff5555; width: 20px;"></i> Убить 35 истребителей</div>
-                    <div style="margin-bottom: 5px;"><i class="fa-solid fa-file-invoice" style="color: #ff79c6; width: 20px;"></i> Выполнить 4 тяжелых поручения Лун</div>
-                    <div style="margin-bottom: 5px;"><i class="fa-solid fa-hands-helping" style="color: #50b4f2; width: 20px;"></i> Помочь 4 раза в проведении задания/тренировки Инструктору / Луне</div>
-                    <div><i class="fa-solid fa-award" style="color: #f1fa8c; width: 20px;"></i> Получить похвалу Луны</div>
+                <div class="mission-list">
+                    <div class="mission-item"><i class="fa-solid fa-skull" style="color: #ff5555;"></i> Убить 5 столпов</div>
+                    <div class="mission-item"><i class="fa-solid fa-crosshairs" style="color: #ff5555;"></i> Убить 35 истребителей</div>
+                    <div class="mission-item"><i class="fa-solid fa-file-invoice" style="color: #ff79c6;"></i> Выполнить 4 тяжелых поручения Лун</div>
+                    <div class="mission-item"><i class="fa-solid fa-hands-helping" style="color: #50b4f2;"></i> Помочь 4 раза в проведении задания/тренировки Инструктору / Луне</div>
+                    <div class="mission-item"><i class="fa-solid fa-award" style="color: #f1fa8c;"></i> Получить похвалу Луны</div>
                 </div>
             </div>
         </div>
 
-        <div class="task-card-wide" style="border-left: 5px solid #ff5555; padding: 25px; min-height: auto;">
-            <div class="task-wide-info" style="width: 100%;">
-                <div class="task-wide-name" style="color: #ff5555; font-size: 1.3rem; margin-bottom: 12px; font-weight: 700; letter-spacing: 0.5px;">
+        <div class="task-card-wide mission-card mission-senior">
+            <div class="task-wide-info">
+                <div class="task-wide-name mission-title-senior">
                     <i class="fa-solid fa-angle-right"></i> [Старший состав] Синта → Ёкай
                 </div>
-                <div class="task-wide-desc" style="font-size: 1.05rem; line-height: 1.6; color: #cbd5e1;">
-                    <div style="margin-bottom: 5px;"><i class="fa-solid fa-skull" style="color: #ff5555; width: 20px;"></i> Убить 12 столпов</div>
-                    <div style="margin-bottom: 5px;"><i class="fa-solid fa-file-invoice" style="color: #ff79c6; width: 20px;"></i> Выполнить 4 тяжелых поручения Лун</div>
-                    <div style="margin-bottom: 5px;"><i class="fa-solid fa-crown" style="color: #bd93f9; width: 20px;"></i> Выполнить 2 поручения I-III Высшей Луны</div>
-                    <div style="margin-bottom: 5px;"><i class="fa-solid fa-gavel" style="color: #ff5555; width: 20px;"></i> Выполнить 2 поручения Мудзана</div>
-                    <div style="margin-bottom: 5px;"><i class="fa-solid fa-shield-halved" style="color: #50b4f2; width: 20px;"></i> Получить одобрение от Высшей Луны после поединка с ней</div>
-                    <div style="margin-bottom: 5px;"><i class="fa-solid fa-hands-helping" style="color: #50b4f2; width: 20px;"></i> Помочь 4 раза в проведении задания/тренировки Инструктору / Луне</div>
-                    <div><i class="fa-solid fa-eye" style="color: #f1fa8c; width: 20px;"></i> Получить одобрение Мудзана</div>
+                <div class="mission-list">
+                    <div class="mission-item"><i class="fa-solid fa-skull" style="color: #ff5555;"></i> Убить 12 столпов</div>
+                    <div class="mission-item"><i class="fa-solid fa-file-invoice" style="color: #ff79c6;"></i> Выполнить 4 тяжелых поручения Лун</div>
+                    <div class="mission-item"><i class="fa-solid fa-crown" style="color: #bd93f9;"></i> Выполнить 2 поручения I-III Высшей Луны</div>
+                    <div class="mission-item"><i class="fa-solid fa-gavel" style="color: #ff5555;"></i> Выполнить 2 поручения Мудзана</div>
+                    <div class="mission-item"><i class="fa-solid fa-shield-halved" style="color: #50b4f2;"></i> Получить одобрение от Высшей Луны после поединка с ней</div>
+                    <div class="mission-item"><i class="fa-solid fa-hands-helping" style="color: #50b4f2;"></i> Помочь 4 раза в проведении задания/тренировки Инструктору / Луне</div>
+                    <div class="mission-item"><i class="fa-solid fa-eye" style="color: #f1fa8c;"></i> Получить одобрение Мудзана</div>
                 </div>
             </div>
         </div>
 
     </div>
+
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
