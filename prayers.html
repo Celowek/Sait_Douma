@@ -13,7 +13,7 @@
 
 <nav class="sidebar">
     <div class="sidebar-logo">
-        <i class="fa-solid fa-snowflake"></i>
+        <i class="fa-solid fa-fan"></i>
         <span>Вечный Рай</span>
     </div>
     <a class="sidebar-item" href="index.html"><i class="fa-solid fa-house"></i> <span>Главная</span></a>
@@ -29,6 +29,16 @@
     <h1 class="main-title">СВЯЩЕННЫЕ МОЛИТВЫ</h1>
     <div class="page-subtitle">Слова упования, покоя и верности для адептов Культа Вечного Рая</div>
 
+    <!-- НОВАЯ ФИШКА: ИНТЕРАКТИВНЫЙ АЛТАРЬ БЛАГОСЛОВЕНИЙ ДОУМЫ -->
+    <div class="altar-widget">
+        <h3 class="altar-title"><i class="fa-solid fa-fan"></i> Хрустальный Алтарь Вечного Рая</h3>
+        <p style="color: #cbd5e1; font-size: 0.95rem;">Склони голову перед Второй Высшей Луной, чтобы получить знамение перед вылазкой</p>
+        <div class="altar-result" id="altarResult">«Произнеси молитву и прикоснись к ледяному лотосу...»</div>
+        <button class="altar-btn" onclick="prayAtAltar()">
+            <i class="fa-solid fa-hands-praying"></i> Испросить благословение Доумы
+        </button>
+    </div>
+
     <div class="prayers-grid">
         
         <div class="prayer-tablet">
@@ -40,22 +50,17 @@
                 <div class="prayer-content">
                     <p>О Свет Вечного Рая, хранитель тихих небес,<br>
                     Прими наши голоса, что тянутся сквозь туман миров.</p>
-                    
                     <p>Даруй сердцам нашим ясность,<br>
                     Душам нашим — покой,<br>
                     Пути нашим — мягкий свет.</p>
-                    
                     <p>Да не коснётся нас тень забвения,<br>
                     И да не отвратит нас буря от Дверей Твоих.</p>
-                    
                     <p>Пусть помнят нас ветра,<br>
                     Пусть услышат нас звёзды,<br>
                     Когда мы произносим Имя Твоё.</p>
-                    
                     <p>Веди нас к рассвету, что не знает заката,<br>
                     К Саду, где не увядает ни один лист,<br>
                     К Тишине, где вечность дышит без страха и боли.</p>
-                    
                     <p>И да пребудет над нами Твой светлый мир,<br>
                     Непоколебимый, нетленный, вечный.<br>
                     Да будет Рай открыт тем, кто идёт с чистым сердцем.</p>
@@ -78,21 +83,87 @@
                 <div class="prayer-content">
                     <p>О сияющий Господин Вечного Рая,<br>
                     Холод твоего покоя чист как первозданный лёд.</p>
-                    
                     <p>Мы склоняемся перед твоей безмятежной улыбкой,<br>
                     Перед ясностью, что не знает боли и сомнений.</p>
-                    
                     <p>Прими наши голоса, растворенные в тишине,<br>
                     Как снег тает на ладони твоей.</p>
-                    
                     <p>Даруй нам ту лёгкость,<br>
                     Что освобождает сердца от страданий,<br>
                     И веди нас в безмятежный Рай,<br>
                     Где нет страха, нет скорби, нет жара людских чувств.</p>
-                    
                     <p>Пусть ледяной свет твоего совершенства<br>
                     Покроет наши мысли прозрачной чистотой.</p>
-                    
                     <p>Мы следуем за тобой туда,<br>
                     Где вечная пустота становится покоем,<br>
                     Где души находят последний отдых<br>
+                    Под хрустальным куполом Вечного Рая.</p>
+                    <p>Господин хранитель холодного блаженства,<br>
+                    Прими нас в свою тихую вечность.</p>
+                </div>
+            </div>
+            <div class="prayer-bottom">
+                <button class="copy-prayer-btn" onclick="copyPrayer(this)">
+                    <i class="fa-regular fa-copy"></i> Скопировать текст
+                </button>
+                <div class="prayer-footer">Благословение Доумы • Хрустальный купол</div>
+            </div>
+        </div>
+
+        <div class="prayer-tablet">
+            <div>
+                <div class="prayer-header">
+                    <i class="fa-solid fa-scroll prayer-icon"></i>
+                    <h3 class="prayer-title">Взывание к Всевышнему</h3>
+                </div>
+                <div class="prayer-content">
+                    <p>Владыка и Отец ты наш!</p>
+                    <p>Признаем мы власть твою над миром всем<br>
+                    и над душами нашими!</p>
+                    <p>Да будет воля твоя, как на Земле,<br>
+                    так в Божественных садах!</p>
+                    <p>Да будет взор твой обращен к нашим делам мирским!</p>
+                    <p>Да будет имя твое не забыто в веках!</p>
+                </div>
+            </div>
+            <div class="prayer-bottom">
+                <button class="copy-prayer-btn" onclick="copyPrayer(this)">
+                    <i class="fa-regular fa-copy"></i> Скопировать текст
+                </button>
+                <div class="prayer-footer">Признание власти • Божественные сады</div>
+            </div>
+        </div>
+
+        <div class="prayer-tablet">
+            <div>
+                <div class="prayer-header">
+                    <i class="fa-solid fa-scroll prayer-icon"></i>
+                    <h3 class="prayer-title">Вечная служба</h3>
+                </div>
+                <div class="prayer-content">
+                    <p>О, Господин Вечного Рая!</p>
+                    <p>Окажи нам великую честь,<br>
+                    позволь стать слугами мира твоего!</p>
+                    <p>Позволь нести нам волю твою в сердца тех,<br>
+                    кто слеп к словам Твоим!</p>
+                    <p>Даруй нам право быть теми,<br>
+                    кто будет Любим и Не будет забыт!</p>
+                    <p>И мы вверяем тебе свои жизни и свои души!</p>
+                    <p>Ведь тот кто умер во служение Твое,<br>
+                    продолжит службу свою в Вечном Раю!</p>
+                </div>
+            </div>
+            <div class="prayer-bottom">
+                <button class="copy-prayer-btn" onclick="copyPrayer(this)">
+                    <i class="fa-regular fa-copy"></i> Скопировать текст
+                </button>
+                <div class="prayer-footer">Клятва верности • Бессмертное служение</div>
+            </div>
+        </div>
+
+    </div>
+
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>

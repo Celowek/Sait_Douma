@@ -13,7 +13,7 @@
 
 <nav class="sidebar">
     <div class="sidebar-logo">
-        <i class="fa-solid fa-snowflake"></i>
+        <i class="fa-solid fa-fan"></i>
         <span>Вечный Рай</span>
     </div>
     <a class="sidebar-item" href="index.html"><i class="fa-solid fa-house"></i> <span>Главная</span></a>
@@ -25,335 +25,411 @@
 
 <main class="main-container">
     
-    <div class="cult-badge"><i class="fa-solid fa-icicles"></i> Иерархия отряда</div>
-    <h1 class="main-title" id="ranks-section">СИСТЕМА ПОВЫШЕНИЯ</h1>
-    <div class="page-subtitle">От Новорожденного до Ёкая — по ступеням силы</div>
+    <div class="cult-badge"><i class="fa-solid fa-crown"></i> Иерархия Демонов Культа</div>
+    <h1 class="main-title">СИСТЕМА ПОВЫШЕНИЯ</h1>
+    <div class="page-subtitle">Путь возвышения от Hinaga до Dzigoku (Демона высшей крови)</div>
 
-    <!-- Быстрая навигация по странице -->
-    <div class="quick-nav">
-        <a href="#ranks-section" class="quick-nav-btn"><i class="fa-solid fa-layer-group"></i> Стоимость рангов</a>
-        <a href="#earn-section" class="quick-nav-btn"><i class="fa-solid fa-gem"></i> Получение льдинок</a>
-        <a href="#missions-section" class="quick-nav-btn"><i class="fa-solid fa-list-check"></i> Повышение по заданиям</a>
-    </div>
-    
-    <!-- КАРТОЧКИ РАНГОВ И КД -->
-    <div class="ranks-grid">
-        <!-- Младший состав (КД 2 дня) -->
-        <div class="rank-card">
-            <span class="rank-tier-tag tier-junior">Младший состав</span>
-            <div class="card-icon"><i class="fa-solid fa-baby"></i></div>
-            <div class="card-title">Новорожденный → Дзикини</div>
-            <div class="card-points">15 льдинок</div>
-            <div class="card-cooldown"><span></span><i class="fa-regular fa-clock"></i> Время отката 2 дня</div>
-            <div class="card-progress"><div class="progress-fill" style="width: 10%;"></div></div>
+    <!-- ВЕРХНЯЯ ПАНЕЛЬ: ТАБЛИЦА КД И ПЕРСОНАЛЬНЫЙ ТАЙМЕР ОТКАТА -->
+    <div class="rank-dashboard">
+        <div class="cooldown-summary-panel">
+            <div class="panel-heading"><i class="fa-regular fa-clock"></i> Регламент отката на повышение (КД)</div>
+            <div class="cd-tiers-list">
+                <div class="cd-tier-row">
+                    <span class="cd-ranks-names">1. Hinaga • 2. Kagebosi • 3. Yamabiko</span>
+                    <span class="cd-badge">КД: 1 день</span>
+                </div>
+                <div class="cd-tier-row cd-mid">
+                    <span class="cd-ranks-names">4. Nure-Onna • 5. Gaki • 6. Karakasi • 7. Tsurube-Otosi</span>
+                    <span class="cd-badge">КД: 2 дня</span>
+                </div>
+                <div class="cd-tier-row cd-high">
+                    <span class="cd-ranks-names">8. Okami • 9. Gashadakuro • 10. Dzigoku</span>
+                    <span class="cd-badge">КД: 3 дня</span>
+                </div>
+            </div>
         </div>
 
-        <div class="rank-card">
-            <span class="rank-tier-tag tier-junior">Младший состав</span>
-            <div class="card-icon"><i class="fa-solid fa-spaghetti-monster-flying"></i></div>
-            <div class="card-title">Дзикини → Сюдзин</div>
-            <div class="card-points">30 льдинок</div>
-            <div class="card-cooldown"><span></span><i class="fa-regular fa-clock"></i> Время отката 2 дня</div>
-            <div class="card-progress"><div class="progress-fill" style="width: 20%;"></div></div>
-        </div>
-
-        <div class="rank-card">
-            <span class="rank-tier-tag tier-junior">Младший состав</span>
-            <div class="card-icon"><i class="fa-solid fa-crown"></i></div>
-            <div class="card-title">Сюдзин → Гецуэй</div>
-            <div class="card-points">45 льдинок</div>
-            <div class="card-cooldown"><span></span><i class="fa-regular fa-clock"></i> Время отката 2 дня</div>
-            <div class="card-progress"><div class="progress-fill" style="width: 30%;"></div></div>
-        </div>
-
-        <div class="rank-card">
-            <span class="rank-tier-tag tier-junior">Младший состав</span>
-            <div class="card-icon"><i class="fa-solid fa-crown"></i></div>
-            <div class="card-title">Гецуэй → Асура</div>
-            <div class="card-points">60 льдинок</div>
-            <div class="card-cooldown"><span></span><i class="fa-regular fa-clock"></i> Время отката 2 дня</div>
-            <div class="card-progress"><div class="progress-fill" style="width: 40%;"></div></div>
-        </div>
-
-        <!-- Средний состав (КД 4 дня) -->
-        <div class="rank-card">
-            <span class="rank-tier-tag tier-middle">Средний состав</span>
-            <div class="card-icon"><i class="fa-solid fa-ghost"></i></div>
-            <div class="card-title">Асура → Кэкки</div>
-            <div class="card-points">80 льдинок</div>
-            <div class="card-cooldown"><span></span><i class="fa-regular fa-clock"></i> Время отката 4 дня</div>
-            <div class="card-progress"><div class="progress-fill" style="width: 50%;"></div></div>
-        </div>
-
-        <div class="rank-card">
-            <span class="rank-tier-tag tier-middle">Средний состав</span>
-            <div class="card-icon"><i class="fa-solid fa-bolt"></i></div>
-            <div class="card-title">Кэкки → Сиро</div>
-            <div class="card-points">100 льдинок</div>
-            <div class="card-cooldown"><span></span><i class="fa-regular fa-clock"></i> Время отката 4 дня</div>
-            <div class="card-progress"><div class="progress-fill" style="width: 60%;"></div></div>
-        </div>
-
-        <div class="rank-card">
-            <span class="rank-tier-tag tier-middle">Средний состав</span>
-            <div class="card-icon"><i class="fa-solid fa-shield-halved"></i></div>
-            <div class="card-title">Сиро → Ракан</div>
-            <div class="card-points">125 льдинок</div>
-            <div class="card-cooldown"><span></span><i class="fa-regular fa-clock"></i> Время отката 4 дня</div>
-            <div class="card-progress"><div class="progress-fill" style="width: 70%;"></div></div>
-        </div>
-
-        <div class="rank-card">
-            <span class="rank-tier-tag tier-middle">Средний состав</span>
-            <div class="card-icon"><i class="fa-solid fa-scroll"></i></div>
-            <div class="card-title">Ракан → Ониби</div>
-            <div class="card-points">150 льдинок</div>
-            <div class="card-cooldown"><span></span><i class="fa-regular fa-clock"></i> Время отката 4 дня</div>
-            <div class="card-progress"><div class="progress-fill" style="width: 80%;"></div></div>
-        </div>
-
-        <!-- Старший состав (КД 7 дней) -->
-        <div class="rank-card">
-            <span class="rank-tier-tag tier-senior">Старший состав</span>
-            <div class="card-icon"><i class="fa-solid fa-leaf"></i></div>
-            <div class="card-title">Ониби → Синта</div>
-            <div class="card-points">200 льдинок</div>
-            <div class="card-cooldown"><span></span><i class="fa-regular fa-clock"></i> Время отката 7 дней</div>
-            <div class="card-progress"><div class="progress-fill" style="width: 90%;"></div></div>
-        </div>
-
-        <div class="rank-card">
-            <span class="rank-tier-tag tier-senior">Старший состав</span>
-            <div class="card-icon"><i class="fa-solid fa-skull"></i></div>
-            <div class="card-title">Синта → Ёкай</div>
-            <div class="card-points">300 льдинок</div>
-            <div class="card-cooldown"><span></span><i class="fa-regular fa-clock"></i> Время отката 7 дней</div>
-            <div class="card-progress"><div class="progress-fill" style="width: 100%;"></div></div>
+        <div class="timer-widget-panel">
+            <div class="panel-heading"><i class="fa-solid fa-hourglass-half"></i> Личный таймер отката</div>
+            <div class="timer-display" id="cdTimerDisplay">КД ОТСУТСТВУЕТ</div>
+            <div class="timer-controls">
+                <button class="timer-btn" onclick="startCooldownTimer(1)">Запустить 1 день</button>
+                <button class="timer-btn" onclick="startCooldownTimer(2)">Запустить 2 дня</button>
+                <button class="timer-btn" onclick="startCooldownTimer(3)">Запустить 3 дня</button>
+                <button class="timer-btn reset-btn" onclick="resetCooldownTimer()" title="Сбросить таймер"><i class="fa-solid fa-rotate-left"></i></button>
+            </div>
         </div>
     </div>
 
-    <hr class="section-divider" id="earn-section">
-
-    <!-- СПОСОБЫ ПОЛУЧЕНИЯ ЛЬДИНОК -->
-    <h2 class="main-title content-spacing">СПОСОБЫ ПОЛУЧЕНИЯ ЛЬДИНОК</h2>
-    <div class="page-subtitle">Проявляйте активность в жизни культа и отряда, чтобы зарабатывать ресурсы</div>
-
-    <div class="tasks-list-wide">
-        <div class="task-card-wide">
-            <div class="task-wide-info">
-                <div class="task-wide-name">Участие в событии</div>
-                <div class="task-wide-desc">Активное проявление себя на внутренних мероприятиях отряда.</div>
+    <!-- ВАЖНОЕ ПРАВИЛО ПРО СКРИНШОТЫ НА IMGUR -->
+    <div class="imgur-alert-banner">
+        <div class="imgur-alert-text">
+            <i class="fa-solid fa-camera-retro"></i>
+            <div>
+                <strong>Правило подачи отчётов со скриншотами:</strong><br>
+                Для заданий, которые требуют скриншот (Захват точек, собрать строй и др.), при большом количестве скриншоты необходимо грузить на <strong>Imgur</strong> или аналог!
             </div>
-            <div class="task-wide-reward">5 🧊</div>
-        </div>
-        <div class="task-card-wide">
-            <div class="task-wide-info">
-                <div class="task-wide-name">Поручение Низшей луны</div>
-                <div class="task-wide-desc">Успешное закрытие текущих задач, выданных Низшими Лунами.</div>
-            </div>
-            <div class="task-wide-reward">1-10 🧊</div>
-        </div>
-        <div class="task-card-wide">
-            <div class="task-wide-info">
-                <div class="task-wide-name">Проведение молитвы в храме</div>
-                <div class="task-wide-desc">Проведение ритуалов и чтение священных текстов во славу культа.</div>
-            </div>
-            <div class="task-wide-reward">1-5 🧊</div>
-        </div>
-        <div class="task-card-wide">
-            <div class="task-wide-info">
-                <div class="task-wide-name">Участие в межфраке | ГРП</div>
-                <div class="task-wide-desc">Участие в глобальных ролевых ситуациях и межфракционных стычках.</div>
-            </div>
-            <div class="task-wide-reward">10 / 20 🧊</div>
-        </div>
-        <div class="task-card-wide">
-            <div class="task-wide-info">
-                <div class="task-wide-name">Выполнение личного поручения от Доумы</div>
-                <div class="task-wide-desc">Особые приказы от главы Культа Вечного Рая.</div>
-            </div>
-            <div class="task-wide-reward">15 🧊</div>
-        </div>
-        <div class="task-card-wide">
-            <div class="task-wide-info">
-                <div class="task-wide-name">Выполнение поручения от следящей луны</div>
-                <div class="task-wide-desc">Выполнение инспекций и заданий под надзором Следящей Луны.</div>
-            </div>
-            <div class="task-wide-reward">10 🧊</div>
-        </div>
-        <div class="task-card-wide">
-            <div class="task-wide-info">
-                <div class="task-wide-name">Убийство Истребителя</div>
-                <div class="task-wide-desc">Ликвидация рядового члена корпуса истребителей демонов.</div>
-            </div>
-            <div class="task-wide-reward">1 🧊 (Макс. 10 в день)</div>
-        </div>
-        <div class="task-card-wide">
-            <div class="task-wide-info">
-                <div class="task-wide-name">Убийство Столпа</div>
-                <div class="task-wide-desc">Устранение одного из сильнейших мечников организации истребителей.</div>
-            </div>
-            <div class="task-wide-reward">5 🧊 (Макс. 5 в день)</div>
-        </div>
-        <div class="task-card-wide">
-            <div class="task-wide-info">
-                <div class="task-wide-name">Выполнение сложного задания от Мудзана</div>
-                <div class="task-wide-desc">Высший приоритет. Прямой приказ Владыки демонов.</div>
-            </div>
-            <div class="task-wide-reward">25 🧊</div>
         </div>
     </div>
 
-    <hr class="section-divider" id="missions-section">
+    <!-- ОБЩИЙ ПРОГРЕСС ВЫПОЛНЕНИЯ ЗАДАНИЙ -->
+    <div class="overall-progress-box">
+        <div class="overall-progress-header">
+            <span><i class="fa-solid fa-list-check" style="color: var(--ice-cyan);"></i> Твой общий прогресс по ступеням возвышения (нажимай на задания ниже, чтобы отмечать):</span>
+            <span id="overallProgressText">0 / 34 заданий (0%)</span>
+        </div>
+        <div class="overall-bar-bg">
+            <div class="overall-bar-fill" id="overallBarFill"></div>
+        </div>
+    </div>
 
-    <!-- СЕКЦИЯ: ПОВЫШЕНИЕ С ПОМОЩЬЮ ЗАДАНИЙ -->
-    <h2 class="main-title content-spacing">ПОВЫШЕНИЕ С ПОМОЩЬЮ ЗАДАНИЙ</h2>
-    <div class="page-subtitle">Выполняйте фиксированные цепочки миссий для получения новых рангов</div>
+    <!-- ФИЛЬТРЫ ПО ГРУППАМ КД -->
+    <div class="rank-filters">
+        <button class="filter-btn active" onclick="filterRanks('all', this)">Все ступени (1–10)</button>
+        <button class="filter-btn" onclick="filterRanks('tier-1', this)">Низшая кровь • КД 1 день</button>
+        <button class="filter-btn" onclick="filterRanks('tier-2', this)">Средняя кровь • КД 2 дня</button>
+        <button class="filter-btn" onclick="filterRanks('tier-3', this)">Высшая кровь • КД 3 дня</button>
+    </div>
 
-    <div class="tasks-list-wide">
-        
-        <!-- МЛАДШИЙ СОСТАВ -->
-        <div class="task-card-wide mission-card mission-junior">
-            <div class="task-wide-info">
-                <div class="task-wide-name mission-title-junior">
-                    <i class="fa-solid fa-angle-right"></i> [Младший состав] Новорожденный → Дзикини
+    <!-- СПИСОК ВСЕХ 9 ПЕРЕХОДОВ (10 РАНГОВ) -->
+    <div class="ranks-progression-list">
+
+        <!-- 1. Hinaga -> Kagebosi -->
+        <div class="rank-step-card tier-1">
+            <div>
+                <div class="rank-step-top">
+                    <span class="step-number-badge">Ступень I (Ранг 1 ➡ 2)</span>
+                    <span class="step-cd-pill"><i class="fa-regular fa-clock"></i> КД: 1 день</span>
                 </div>
-                <div class="mission-list">
-                    <div class="mission-item"><i class="fa-solid fa-crosshairs" style="color: #ff5555;"></i> Убить 1 истребителя</div>
-                    <div class="mission-item"><i class="fa-solid fa-dumbbell" style="color: #50b4f2;"></i> Пройти 1 тренировку</div>
+                <div class="rank-arrow-title">Hinaga <i class="fa-solid fa-arrow-right"></i> Kagebosi</div>
+                <div class="Interactive-tasks">
+                    <div class="check-task-item" data-task-id="r1_t1">
+                        <div class="custom-checkbox"><i class="fa-solid fa-check"></i></div>
+                        <div class="task-text">Пройди инструктаж по магиям крови.</div>
+                    </div>
+                    <div class="check-task-item" data-task-id="r1_t2">
+                        <div class="custom-checkbox"><i class="fa-solid fa-check"></i></div>
+                        <div class="task-text">Участвуй в 2-х захватах точек.</div>
+                    </div>
                 </div>
+            </div>
+            <div class="rank-step-footer">
+                <div class="step-progress-wrap">
+                    <span class="step-progress-label">Выполнено: 0 из 2 (0%)</span>
+                    <div class="step-bar"><div class="step-bar-fill"></div></div>
+                </div>
+                <button class="copy-report-btn" onclick="copyRankReport(this, 'Hinaga ➡ Kagebosi')">
+                    <i class="fa-regular fa-copy"></i> Скопировать отчёт
+                </button>
             </div>
         </div>
 
-        <div class="task-card-wide mission-card mission-junior">
-            <div class="task-wide-info">
-                <div class="task-wide-name mission-title-junior">
-                    <i class="fa-solid fa-angle-right"></i> [Младший состав] Дзикини → Сюдзин
+        <!-- 2. Kagebosi -> Yamabiko (Демон низшей крови) -->
+        <div class="rank-step-card tier-1">
+            <div>
+                <div class="rank-step-top">
+                    <span class="step-number-badge">Ступень II (Ранг 2 ➡ 3)</span>
+                    <span class="step-cd-pill"><i class="fa-regular fa-clock"></i> КД: 1 день</span>
                 </div>
-                <div class="mission-list">
-                    <div class="mission-item"><i class="fa-solid fa-dumbbell" style="color: #50b4f2;"></i> Пройти 1 тренировку</div>
-                    <div class="mission-item"><i class="fa-solid fa-clipboard-list" style="color: #ffb86c;"></i> Выполнить 2 легких поручения</div>
-                    <div class="mission-item"><i class="fa-solid fa-scroll" style="color: #bd93f9;"></i> Сдать «Кровные Обязанности»</div>
+                <div class="rank-arrow-title">Kagebosi <i class="fa-solid fa-arrow-right"></i> Yamabiko</div>
+                <div class="blood-rank-subtitle"><i class="fa-solid fa-droplet"></i> Демон низшей крови</div>
+                <div class="Interactive-tasks">
+                    <div class="check-task-item" data-task-id="r2_t1">
+                        <div class="custom-checkbox"><i class="fa-solid fa-check"></i></div>
+                        <div class="task-text">Выполни задание I уровня.</div>
+                    </div>
+                    <div class="check-task-item" data-task-id="r2_t2">
+                        <div class="custom-checkbox"><i class="fa-solid fa-check"></i></div>
+                        <div class="task-text">Убей истребителя и сотри клинок ничирин в порошок.</div>
+                    </div>
+                    <div class="check-task-item" data-task-id="r2_t3">
+                        <div class="custom-checkbox"><i class="fa-solid fa-check"></i></div>
+                        <div class="task-text">Участвуй в 1 тренировке от вышестоящих.</div>
+                    </div>
                 </div>
+            </div>
+            <div class="rank-step-footer">
+                <div class="step-progress-wrap">
+                    <span class="step-progress-label">Выполнено: 0 из 3 (0%)</span>
+                    <div class="step-bar"><div class="step-bar-fill"></div></div>
+                </div>
+                <button class="copy-report-btn" onclick="copyRankReport(this, 'Kagebosi ➡ Yamabiko (Демон низшей крови)')">
+                    <i class="fa-regular fa-copy"></i> Скопировать отчёт
+                </button>
             </div>
         </div>
 
-        <div class="task-card-wide mission-card mission-junior">
-            <div class="task-wide-info">
-                <div class="task-wide-name mission-title-junior">
-                    <i class="fa-solid fa-angle-right"></i> [Младший состав] Сюдзин → Гецуэй
+        <!-- 3. Yamabiko -> Nure-Onna -->
+        <div class="rank-step-card tier-1">
+            <div>
+                <div class="rank-step-top">
+                    <span class="step-number-badge">Ступень III (Ранг 3 ➡ 4)</span>
+                    <span class="step-cd-pill"><i class="fa-regular fa-clock"></i> КД: 1 день</span>
                 </div>
-                <div class="mission-list">
-                    <div class="mission-item"><i class="fa-solid fa-crosshairs" style="color: #ff5555;"></i> Убить 3 истребителей</div>
-                    <div class="mission-item"><i class="fa-solid fa-clipboard-list" style="color: #ffb86c;"></i> Выполнить 3 средних поручений</div>
-                    <div class="mission-item"><i class="fa-solid fa-dumbbell" style="color: #50b4f2;"></i> Пройти 1 тренировку</div>
-                    <div class="mission-item"><i class="fa-solid fa-flag" style="color: #f1fa8c;"></i> Захватить 2 точки</div>
+                <div class="rank-arrow-title">Yamabiko <i class="fa-solid fa-arrow-right"></i> Nure-Onna</div>
+                <div class="Interactive-tasks">
+                    <div class="check-task-item" data-task-id="r3_t1">
+                        <div class="custom-checkbox"><i class="fa-solid fa-check"></i></div>
+                        <div class="task-text">Выполни задание II уровня.</div>
+                    </div>
+                    <div class="check-task-item" data-task-id="r3_t2">
+                        <div class="custom-checkbox"><i class="fa-solid fa-check"></i></div>
+                        <div class="task-text">Сразись с любым демоном и нанеси ему 10 ударов не используя техники магии крови.</div>
+                    </div>
+                    <div class="check-task-item" data-task-id="r3_t3">
+                        <div class="custom-checkbox"><i class="fa-solid fa-check"></i></div>
+                        <div class="task-text">Убей 3-х истребителей и сорви с них накидки.</div>
+                    </div>
+                    <div class="check-task-item" data-task-id="r3_t4">
+                        <div class="custom-checkbox"><i class="fa-solid fa-check"></i></div>
+                        <div class="task-text">Наличие рекомендации I уровня.</div>
+                    </div>
                 </div>
+            </div>
+            <div class="rank-step-footer">
+                <div class="step-progress-wrap">
+                    <span class="step-progress-label">Выполнено: 0 из 4 (0%)</span>
+                    <div class="step-bar"><div class="step-bar-fill"></div></div>
+                </div>
+                <button class="copy-report-btn" onclick="copyRankReport(this, 'Yamabiko ➡ Nure-Onna')">
+                    <i class="fa-regular fa-copy"></i> Скопировать отчёт
+                </button>
             </div>
         </div>
 
-        <div class="task-card-wide mission-card mission-junior">
-            <div class="task-wide-info">
-                <div class="task-wide-name mission-title-junior">
-                    <i class="fa-solid fa-angle-right"></i> [Младший состав] Гецуэй → Асура
+        <!-- 4. Nure-Onna -> Gaki -->
+        <div class="rank-step-card tier-2">
+            <div>
+                <div class="rank-step-top">
+                    <span class="step-number-badge">Ступень IV (Ранг 4 ➡ 5)</span>
+                    <span class="step-cd-pill"><i class="fa-regular fa-clock"></i> КД: 2 дня</span>
                 </div>
-                <div class="mission-list">
-                    <div class="mission-item"><i class="fa-solid fa-dumbbell" style="color: #50b4f2;"></i> Пройти 2 тренировки</div>
-                    <div class="mission-item"><i class="fa-solid fa-crosshairs" style="color: #ff5555;"></i> Убить 6 истребителей</div>
-                    <div class="mission-item"><i class="fa-solid fa-flag" style="color: #f1fa8c;"></i> Захватить 4 точки</div>
-                    <div class="mission-item"><i class="fa-solid fa-clipboard-list" style="color: #ffb86c;"></i> Выполнить 1 среднее поручение</div>
+                <div class="rank-arrow-title">Nure-Onna <i class="fa-solid fa-arrow-right"></i> Gaki</div>
+                <div class="Interactive-tasks">
+                    <div class="check-task-item" data-task-id="r4_t1">
+                        <div class="custom-checkbox"><i class="fa-solid fa-check"></i></div>
+                        <div class="task-text">Выполни задание II уровня.</div>
+                    </div>
+                    <div class="check-task-item" data-task-id="r4_t2">
+                        <div class="custom-checkbox"><i class="fa-solid fa-check"></i></div>
+                        <div class="task-text">Пройди проверку на знание клятв крови у любой Луны.</div>
+                    </div>
+                    <div class="check-task-item" data-task-id="r4_t3">
+                        <div class="custom-checkbox"><i class="fa-solid fa-check"></i></div>
+                        <div class="task-text">Наличие рекомендации I уровня.</div>
+                    </div>
                 </div>
+            </div>
+            <div class="rank-step-footer">
+                <div class="step-progress-wrap">
+                    <span class="step-progress-label">Выполнено: 0 из 3 (0%)</span>
+                    <div class="step-bar"><div class="step-bar-fill"></div></div>
+                </div>
+                <button class="copy-report-btn" onclick="copyRankReport(this, 'Nure-Onna ➡ Gaki')">
+                    <i class="fa-regular fa-copy"></i> Скопировать отчёт
+                </button>
             </div>
         </div>
 
-        <!-- СРЕДНИЙ СОСТАВ -->
-        <div class="task-card-wide mission-card mission-middle">
-            <div class="task-wide-info">
-                <div class="task-wide-name mission-title-middle">
-                    <i class="fa-solid fa-angle-right"></i> [Средний состав] Асура → Кэкки
+        <!-- 5. Gaki -> Karakasi -->
+        <div class="rank-step-card tier-2">
+            <div>
+                <div class="rank-step-top">
+                    <span class="step-number-badge">Ступень V (Ранг 5 ➡ 6)</span>
+                    <span class="step-cd-pill"><i class="fa-regular fa-clock"></i> КД: 2 дня</span>
                 </div>
-                <div class="mission-list">
-                    <div class="mission-item"><i class="fa-solid fa-user-check" style="color: #50b4f2;"></i> Быть одобренным Инструктором / Старшим Инструктором / Луной</div>
-                    <div class="mission-item"><i class="fa-solid fa-crosshairs" style="color: #ff5555;"></i> Убить 12 истребителей</div>
-                    <div class="mission-item"><i class="fa-solid fa-flag" style="color: #f1fa8c;"></i> Захватить 10 точек</div>
-                    <div class="mission-item"><i class="fa-solid fa-clipboard-list" style="color: #ffb86c;"></i> Выполнить 3 средних поручения</div>
+                <div class="rank-arrow-title">Gaki <i class="fa-solid fa-arrow-right"></i> Karakasi</div>
+                <div class="Interactive-tasks">
+                    <div class="check-task-item" data-task-id="r5_t1">
+                        <div class="custom-checkbox"><i class="fa-solid fa-check"></i></div>
+                        <div class="task-text">Выполни 1 задание III уровня.</div>
+                    </div>
+                    <div class="check-task-item" data-task-id="r5_t2">
+                        <div class="custom-checkbox"><i class="fa-solid fa-check"></i></div>
+                        <div class="task-text">Сделай статуэтку в виде паука и подари ее Руи.</div>
+                    </div>
+                    <div class="check-task-item" data-task-id="r5_t3">
+                        <div class="custom-checkbox"><i class="fa-solid fa-check"></i></div>
+                        <div class="task-text">Пройди курс по созданию ядов от Гютаро.</div>
+                    </div>
+                    <div class="check-task-item" data-task-id="r5_t4">
+                        <div class="custom-checkbox"><i class="fa-solid fa-check"></i></div>
+                        <div class="task-text">Наличие рекомендации I уровня.</div>
+                    </div>
                 </div>
+            </div>
+            <div class="rank-step-footer">
+                <div class="step-progress-wrap">
+                    <span class="step-progress-label">Выполнено: 0 из 4 (0%)</span>
+                    <div class="step-bar"><div class="step-bar-fill"></div></div>
+                </div>
+                <button class="copy-report-btn" onclick="copyRankReport(this, 'Gaki ➡ Karakasi')">
+                    <i class="fa-regular fa-copy"></i> Скопировать отчёт
+                </button>
             </div>
         </div>
 
-        <div class="task-card-wide mission-card mission-middle">
-            <div class="task-wide-info">
-                <div class="task-wide-name mission-title-middle">
-                    <i class="fa-solid fa-angle-right"></i> [Средний состав] Кэкки → Сиро
+        <!-- 6. Karakasi -> Tsurube-Otosi (Демон средней крови) -->
+        <div class="rank-step-card tier-2">
+            <div>
+                <div class="rank-step-top">
+                    <span class="step-number-badge">Ступень VI (Ранг 6 ➡ 7)</span>
+                    <span class="step-cd-pill"><i class="fa-regular fa-clock"></i> КД: 2 дня</span>
                 </div>
-                <div class="mission-list">
-                    <div class="mission-item"><i class="fa-solid fa-crosshairs" style="color: #ff5555;"></i> Убить 17 истребителей</div>
-                    <div class="mission-item"><i class="fa-solid fa-skull-crossbones" style="color: #bd93f9;"></i> Победить в дуэли демонов своего ранга (назначает Старший Инструктор / Луна)</div>
-                    <div class="mission-item"><i class="fa-solid fa-award" style="color: #f1fa8c;"></i> Заработать похвалу Старшего Инструктора / Луны</div>
-                    <div class="mission-item"><i class="fa-solid fa-clipboard-list" style="color: #ffb86c;"></i> Выполнить 4 средних поручения</div>
+                <div class="rank-arrow-title">Karakasi <i class="fa-solid fa-arrow-right"></i> Tsurube-Otosi</div>
+                <div class="blood-rank-subtitle"><i class="fa-solid fa-fire-flame-Simple"></i> Демон средней крови</div>
+                <div class="Interactive-tasks">
+                    <div class="check-task-item" data-task-id="r6_t1">
+                        <div class="custom-checkbox"><i class="fa-solid fa-check"></i></div>
+                        <div class="task-text">Одолей в дуэле 3 любых демонов.</div>
+                    </div>
+                    <div class="check-task-item" data-task-id="r6_t2">
+                        <div class="custom-checkbox"><i class="fa-solid fa-check"></i></div>
+                        <div class="task-text">Наличие рекомендации II уровня.</div>
+                    </div>
                 </div>
+            </div>
+            <div class="rank-step-footer">
+                <div class="step-progress-wrap">
+                    <span class="step-progress-label">Выполнено: 0 из 2 (0%)</span>
+                    <div class="step-bar"><div class="step-bar-fill"></div></div>
+                </div>
+                <button class="copy-report-btn" onclick="copyRankReport(this, 'Karakasi ➡ Tsurube-Otosi (Демон средней крови)')">
+                    <i class="fa-regular fa-copy"></i> Скопировать отчёт
+                </button>
             </div>
         </div>
 
-        <div class="task-card-wide mission-card mission-middle">
-            <div class="task-wide-info">
-                <div class="task-wide-name mission-title-middle">
-                    <i class="fa-solid fa-angle-right"></i> [Средний состав] Сиро → Ракан
+        <!-- 7. Tsurube-Otosi -> Okami -->
+        <div class="rank-step-card tier-2">
+            <div>
+                <div class="rank-step-top">
+                    <span class="step-number-badge">Ступень VII (Ранг 7 ➡ 8)</span>
+                    <span class="step-cd-pill"><i class="fa-regular fa-clock"></i> КД: 2 дня</span>
                 </div>
-                <div class="mission-list">
-                    <div class="mission-item"><i class="fa-solid fa-crosshairs" style="color: #ff5555;"></i> Убить 25 истребителей</div>
-                    <div class="mission-item"><i class="fa-solid fa-award" style="color: #f1fa8c;"></i> Заработать похвалу Старшего Инструктора / Луны 2 раза</div>
-                    <div class="mission-item"><i class="fa-solid fa-skull-crossbones" style="color: #bd93f9;"></i> Победить в дуэли демонов своего ранга (назначает Старший Инструктор / Луна)</div>
-                    <div class="mission-item"><i class="fa-solid fa-clipboard-list" style="color: #ffb86c;"></i> Выполнить 5 средних поручений</div>
+                <div class="rank-arrow-title">Tsurube-Otosi <i class="fa-solid fa-arrow-right"></i> Okami</div>
+                <div class="Interactive-tasks">
+                    <div class="check-task-item" data-task-id="r7_t1">
+                        <div class="custom-checkbox"><i class="fa-solid fa-check"></i></div>
+                        <div class="task-text">Убей 15 истребителей.</div>
+                    </div>
+                    <div class="check-task-item" data-task-id="r7_t2">
+                        <div class="custom-checkbox"><i class="fa-solid fa-check"></i></div>
+                        <div class="task-text">Прими участие в Ивентах от Инструктора. (Минимум 2)</div>
+                    </div>
+                    <div class="check-task-item" data-task-id="r7_t3">
+                        <div class="custom-checkbox"><i class="fa-solid fa-check"></i></div>
+                        <div class="task-text">Прими участие в 3 тренировках от вышестоящих.</div>
+                    </div>
+                    <div class="check-task-item" data-task-id="r7_t4">
+                        <div class="custom-checkbox"><i class="fa-solid fa-check"></i></div>
+                        <div class="task-text">Похить истребителя и попробуй выведать у него информацию о столпах.</div>
+                    </div>
+                    <div class="check-task-item" data-task-id="r7_t5">
+                        <div class="custom-checkbox"><i class="fa-solid fa-check"></i></div>
+                        <div class="task-text">Выполни 1 задание III уровня.</div>
+                    </div>
+                    <div class="check-task-item" data-task-id="r7_t6">
+                        <div class="custom-checkbox"><i class="fa-solid fa-check"></i></div>
+                        <div class="task-text">Наличие рекомендации II уровня.</div>
+                    </div>
                 </div>
+            </div>
+            <div class="rank-step-footer">
+                <div class="step-progress-wrap">
+                    <span class="step-progress-label">Выполнено: 0 из 6 (0%)</span>
+                    <div class="step-bar"><div class="step-bar-fill"></div></div>
+                </div>
+                <button class="copy-report-btn" onclick="copyRankReport(this, 'Tsurube-Otosi ➡ Okami')">
+                    <i class="fa-regular fa-copy"></i> Скопировать отчёт
+                </button>
             </div>
         </div>
 
-        <div class="task-card-wide mission-card mission-middle">
-            <div class="task-wide-info">
-                <div class="task-wide-name mission-title-middle">
-                    <i class="fa-solid fa-angle-right"></i> [Средний состав] Ракан → Ониби
+        <!-- 8. Okami -> Gashadakuro -->
+        <div class="rank-step-card tier-3">
+            <div>
+                <div class="rank-step-top">
+                    <span class="step-number-badge">Ступень VIII (Ранг 8 ➡ 9)</span>
+                    <span class="step-cd-pill"><i class="fa-regular fa-clock"></i> КД: 3 дня</span>
                 </div>
-                <div class="mission-list">
-                    <div class="mission-item"><i class="fa-solid fa-skull" style="color: #ff5555;"></i> Убить 3 столпа</div>
-                    <div class="mission-item"><i class="fa-solid fa-crosshairs" style="color: #ff5555;"></i> Убить 30 истребителей</div>
-                    <div class="mission-item"><i class="fa-solid fa-file-invoice" style="color: #ff79c6;"></i> Выполнить 2 тяжелых поручения Старшего Инструктора / Луны</div>
-                    <div class="mission-item"><i class="fa-solid fa-user-shield" style="color: #50b4f2;"></i> Получить одобрение Луны</div>
-                    <div class="mission-item"><i class="fa-solid fa-clipboard-list" style="color: #ffb86c;"></i> Выполнить 6 средних поручений</div>
+                <div class="rank-arrow-title">Okami <i class="fa-solid fa-arrow-right"></i> Gashadakuro</div>
+                <div class="Interactive-tasks">
+                    <div class="check-task-item" data-task-id="r8_t1">
+                        <div class="custom-checkbox"><i class="fa-solid fa-check"></i></div>
+                        <div class="task-text">Разработай тренировку на пару с инструктором и совместно проведите ее.</div>
+                    </div>
+                    <div class="check-task-item" data-task-id="r8_t2">
+                        <div class="custom-checkbox"><i class="fa-solid fa-check"></i></div>
+                        <div class="task-text">Собери строй и возглавь вылазку.</div>
+                    </div>
+                    <div class="check-task-item" data-task-id="r8_t3">
+                        <div class="custom-checkbox"><i class="fa-solid fa-check"></i></div>
+                        <div class="task-text">Прими участие в любом РП мероприятии от луны.</div>
+                    </div>
                 </div>
+            </div>
+            <div class="rank-step-footer">
+                <div class="step-progress-wrap">
+                    <span class="step-progress-label">Выполнено: 0 из 3 (0%)</span>
+                    <div class="step-bar"><div class="step-bar-fill"></div></div>
+                </div>
+                <button class="copy-report-btn" onclick="copyRankReport(this, 'Okami ➡ Gashadakuro')">
+                    <i class="fa-regular fa-copy"></i> Скопировать отчёт
+                </button>
             </div>
         </div>
 
-        <!-- СТАРШИЙ СОСТАВ -->
-        <div class="task-card-wide mission-card mission-senior">
-            <div class="task-wide-info">
-                <div class="task-wide-name mission-title-senior">
-                    <i class="fa-solid fa-angle-right"></i> [Старший состав] Ониби → Синта
+        <!-- 9. Gashadakuro -> Dzigoku (Демон высшей крови) -->
+        <div class="rank-step-card tier-3" style="grid-column: 1 / -1;">
+            <div>
+                <div class="rank-step-top">
+                    <span class="step-number-badge">Высшая Ступень IX (Ранг 9 ➡ 10)</span>
+                    <span class="step-cd-pill"><i class="fa-regular fa-clock"></i> КД: 3 дня</span>
                 </div>
-                <div class="mission-list">
-                    <div class="mission-item"><i class="fa-solid fa-skull" style="color: #ff5555;"></i> Убить 5 столпов</div>
-                    <div class="mission-item"><i class="fa-solid fa-crosshairs" style="color: #ff5555;"></i> Убить 35 истребителей</div>
-                    <div class="mission-item"><i class="fa-solid fa-file-invoice" style="color: #ff79c6;"></i> Выполнить 4 тяжелых поручения Лун</div>
-                    <div class="mission-item"><i class="fa-solid fa-hands-helping" style="color: #50b4f2;"></i> Помочь 4 раза в проведении задания/тренировки Инструктору / Луне</div>
-                    <div class="mission-item"><i class="fa-solid fa-award" style="color: #f1fa8c;"></i> Получить похвалу Луны</div>
+                <div class="rank-arrow-title">Gashadakuro <i class="fa-solid fa-arrow-right"></i> Dzigoku</div>
+                <div class="blood-rank-subtitle" style="background: rgba(255, 42, 95, 0.2); color: #fda4af; border-color: rgba(255, 42, 95, 0.5);">
+                    <i class="fa-solid fa-skull"></i> Демон высшей крови
+                </div>
+                <div class="Interactive-tasks">
+                    <div class="check-task-item" data-task-id="r9_t1">
+                        <div class="custom-checkbox"><i class="fa-solid fa-check"></i></div>
+                        <div class="task-text">Одолей любого демона в битве крови [ Демон не должен быть слабее вас более чем на 2 ранга ]</div>
+                    </div>
+                    <div class="check-task-item" data-task-id="r9_t2">
+                        <div class="custom-checkbox"><i class="fa-solid fa-check"></i></div>
+                        <div class="task-text">Выполни 3 задания III уровня.</div>
+                    </div>
+                    <div class="check-task-item" data-task-id="r9_t3">
+                        <div class="custom-checkbox"><i class="fa-solid fa-check"></i></div>
+                        <div class="task-text">Выполни задание IV уровня.</div>
+                    </div>
+                    <div class="check-task-item" data-task-id="r9_t4">
+                        <div class="custom-checkbox"><i class="fa-solid fa-check"></i></div>
+                        <div class="task-text">Проведи тренировку под присмотром любой из лун.</div>
+                    </div>
+                    <div class="check-task-item" data-task-id="r9_t5">
+                        <div class="custom-checkbox"><i class="fa-solid fa-check"></i></div>
+                        <div class="task-text">Получи одобрение на повышение от первой тройки Высших лун.</div>
+                    </div>
+                    <div class="check-task-item" data-task-id="r9_t6">
+                        <div class="custom-checkbox"><i class="fa-solid fa-check"></i></div>
+                        <div class="task-text">Пройди проверку на знание клятв крови.</div>
+                    </div>
+                    <div class="check-task-item" data-task-id="r9_t7">
+                        <div class="custom-checkbox"><i class="fa-solid fa-check"></i></div>
+                        <div class="task-text">Получи кровь напрямую от Кибуцуджи.</div>
+                    </div>
                 </div>
             </div>
-        </div>
-
-        <div class="task-card-wide mission-card mission-senior">
-            <div class="task-wide-info">
-                <div class="task-wide-name mission-title-senior">
-                    <i class="fa-solid fa-angle-right"></i> [Старший состав] Синта → Ёкай
+            <div class="rank-step-footer">
+                <div class="step-progress-wrap">
+                    <span class="step-progress-label">Выполнено: 0 из 7 (0%)</span>
+                    <div class="step-bar"><div class="step-bar-fill"></div></div>
                 </div>
-                <div class="mission-list">
-                    <div class="mission-item"><i class="fa-solid fa-skull" style="color: #ff5555;"></i> Убить 12 столпов</div>
-                    <div class="mission-item"><i class="fa-solid fa-file-invoice" style="color: #ff79c6;"></i> Выполнить 4 тяжелых поручения Лун</div>
-                    <div class="mission-item"><i class="fa-solid fa-crown" style="color: #bd93f9;"></i> Выполнить 2 поручения I-III Высшей Луны</div>
-                    <div class="mission-item"><i class="fa-solid fa-gavel" style="color: #ff5555;"></i> Выполнить 2 поручения Мудзана</div>
-                    <div class="mission-item"><i class="fa-solid fa-shield-halved" style="color: #50b4f2;"></i> Получить одобрение от Высшей Луны после поединка с ней</div>
-                    <div class="mission-item"><i class="fa-solid fa-hands-helping" style="color: #50b4f2;"></i> Помочь 4 раза в проведении задания/тренировки Инструктору / Луне</div>
-                    <div class="mission-item"><i class="fa-solid fa-eye" style="color: #f1fa8c;"></i> Получить одобрение Мудзана</div>
-                </div>
+                <button class="copy-report-btn" onclick="copyRankReport(this, 'Gashadakuro ➡ Dzigoku (Демон высшей крови)')">
+                    <i class="fa-regular fa-copy"></i> Скопировать отчёт
+                </button>
             </div>
         </div>
 
@@ -363,4 +439,4 @@
 
 <script src="script.js"></script>
 </body>
-</html>
+</html> 

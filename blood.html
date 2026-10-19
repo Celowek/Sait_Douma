@@ -13,7 +13,7 @@
 
 <nav class="sidebar">
     <div class="sidebar-logo">
-        <i class="fa-solid fa-snowflake"></i>
+        <i class="fa-solid fa-fan"></i>
         <span>Вечный Рай</span>
     </div>
     <a class="sidebar-item" href="index.html"><i class="fa-solid fa-house"></i> <span>Главная</span></a>
@@ -27,7 +27,7 @@
     
     <div class="cult-badge"><i class="fa-solid fa-snowflake"></i> Демоническое искусство</div>
     <h1 class="main-title">МАГИЯ ДЕМОНИЧЕСКОЙ КРОВИ</h1>
-    <div class="page-subtitle">Ледяные техники Высшей Луны Доумы для Культа Вечного Рая</div>
+    <div class="page-subtitle">Ледяные техники Высшей Луны Доумы (нажми на любую иллюстрацию для увеличения)</div>
 
     <div class="view-switcher">
         <button class="view-btn active" onclick="setBloodView('list', this)">
@@ -40,91 +40,82 @@
 
     <div class="blood-arts-list" id="bloodArtsList">
         
-        <!-- 1. Ледяные лотосы -->
         <div class="blood-art-card">
             <img class="blood-art-img" data-name="ice-lotus" src="images/ice-lotus.png" alt="Ледяные лотосы">
             <div class="blood-art-info">
-                <span class="blood-art-number">Техника I</span>
+                <span class="blood-art-number">Техника I • Дальняя атака</span>
                 <h3 class="blood-art-name">Ледяные лотосы</h3>
                 <p class="blood-art-desc">Создание нескольких ледяных лотосов из плоти и крови, которые выпускают метель из острых как бритва лепестков. Способны разорвать плоть противника на расстоянии.</p>
             </div>
         </div>
 
-        <!-- 2. Увядшие висячие сады -->
         <div class="blood-art-card">
             <img class="blood-art-img" data-name="withered-hanging-gardens" src="images/withered-hanging-gardens.png" alt="Увядшие висячие сады">
             <div class="blood-art-info">
-                <span class="blood-art-number">Техника II</span>
+                <span class="blood-art-number">Техника II • Шквал ударов</span>
                 <h3 class="blood-art-name">Увядшие висячие сады</h3>
                 <p class="blood-art-desc">Серия из множества стремительных и яростных ударов веерами, которые оставляют за собой шлейфы из ледяных лепестков лотоса, атакуя врага со всех сторон одновременно.</p>
             </div>
         </div>
 
-        <!-- 3. Замораживающие облака -->
         <div class="blood-art-card">
             <img class="blood-art-img" data-name="freezing-clouds" src="images/freezing-clouds.png" alt="Замораживающие облака">
             <div class="blood-art-info">
-                <span class="blood-art-number">Техника III</span>
+                <span class="blood-art-number">Техника III • Ледяной туман</span>
                 <h3 class="blood-art-name">Замораживающие облака</h3>
                 <p class="blood-art-desc">Взмах вееров создаёт густой туман из мельчайших ледяных частиц. Любой, кто вдохнет этот туман, подвергается мгновенному разрушению клеток легких и теряет способность дышать.</p>
             </div>
         </div>
 
-        <!-- 4. Лозы лотосов -->
         <div class="blood-art-card">
             <img class="blood-art-img" data-name="lotus-vines" src="images/lotus-vines.png" alt="Лозы лотосов">
             <div class="blood-art-info">
-                <span class="blood-art-number">Техника IV</span>
+                <span class="blood-art-number">Техника IV • Контроль и захват</span>
                 <h3 class="blood-art-name">Лозы лотосов</h3>
                 <p class="blood-art-desc">Выращивание длинных ледяных лоз, усыпанных лотосами, которые быстро вытягиваются в сторону цели. Они могут захватывать, сковывать движения или сбрасывать врагов с высоты.</p>
             </div>
         </div>
 
-        <!-- 5. Белые принцессы метели -->
         <div class="blood-art-card">
             <img class="blood-art-img" data-name="white-blizzard-princesses" src="images/white-blizzard-princesses.png" alt="Белые принцессы метели">
             <div class="blood-art-info">
-                <span class="blood-art-number">Техника V</span>
+                <span class="blood-art-number">Техника V • Призыв</span>
                 <h3 class="blood-art-name">Белые принцессы метели</h3>
                 <p class="blood-art-desc">Создание двух ледяных гуманоидных фигур принцесс, которые способны выдыхать мощные потоки ледяного ветра, замораживая обширную область перед собой.</p>
             </div>
         </div>
 
-        <!-- 6. Зимние сосульки -->
         <div class="blood-art-card">
             <img class="blood-art-img" data-name="winter-icicles" src="images/winter-icicles.jpg" alt="Зимние сосульки">
             <div class="blood-art-info">
-                <span class="blood-art-number">Техника VI</span>
+                <span class="blood-art-number">Техника VI • Пробивание защиты</span>
                 <h3 class="blood-art-name">Зимние сосульки</h3>
                 <p class="blood-art-desc">Призыв многочисленных острых ледяных копий-сосулек прямо над головой противника. Они обрушиваются вниз с огромной скоростью, пробивая любую защиту.</p>
             </div>
         </div>
 
-        <!-- 7. Развеянные лотосы -->
         <div class="blood-art-card">
             <img class="blood-art-img" data-name="scattered-lotus" src="images/scattered-lotus.png" alt="Развеянные лотосы">
             <div class="blood-art-info">
-                <span class="blood-art-number">Техника VII</span>
+                <span class="blood-art-number">Техника VII • Урон по площади</span>
                 <h3 class="blood-art-name">Развеянные лотосы</h3>
                 <p class="blood-art-desc">Сверхбыстрый взмах веером, порождающий шквал летящих ледяных лепестков. Техника бьет по огромной площади, превращая поле боя в смертоносную снежную бурю.</p>
             </div>
         </div>
 
-        <!-- 8. Кристальное божественное дитя -->
         <div class="blood-art-card">
             <img class="blood-art-img" data-name="crystal-divine-child" src="images/crystal-divine-child.png" alt="Кристальное божественное дитя">
             <div class="blood-art-info">
-                <span class="blood-art-number">Техника VIII</span>
+                <span class="blood-art-number">Техника VIII • Ледяные клоны</span>
                 <h3 class="blood-art-name">Кристальное божественное дитя</h3>
                 <p class="blood-art-desc">Создание миниатюрных ледяных статуй самого себя. Эти куклы способны самостоятельно использовать все техники Магии Крови Доумы и записывать информацию о силе врага.</p>
             </div>
         </div>
 
-        <!-- 9. Замёрзшие воды — Бодхисаттва с кувшинками -->
         <div class="blood-art-card">
             <img class="blood-art-img" data-name="frozen-bodhisattva" src="images/frozen-bodhisattva.png" alt="Замёрзшие воды — Бодхисаттва с кувшинками">
             <div class="blood-art-info">
-                <span class="blood-art-number">Высшая техника IX</span>
+                <span class="blood-art-number">Высшая техника IX • Абсолютный ноль</span>
                 <h3 class="blood-art-name">Замёрзшие воды — Бодхисаттва с кувшинками</h3>
                 <p class="blood-art-desc">Высшая техника. Создание исполинской ледяной статуи Бодхисаттвы. Она способна мгновенно заморозить всё живое вокруг одним дыханием и наносить сокрушительные удары огромными руками.</p>
             </div>
@@ -136,32 +127,18 @@
 
 <script src="script.js"></script>
 <script>
-// Автоматический поиск картинок по всем возможным расширениям и папкам
 document.querySelectorAll('.blood-art-img').forEach(img => {
     const baseName = img.getAttribute('data-name');
     if (!baseName) return;
-
     const candidates = [
-        `images/${baseName}.png`,
-        `images/${baseName}.jpg`,
-        `images/${baseName}.webp`,
-        `images/${baseName}.jpeg`,
-        `${baseName}.png`,
-        `${baseName}.jpg`,
-        `${baseName}.webp`,
-        `${baseName}.jpeg`,
-        `images/${baseName}.jpg.jpg`,
-        `images/${baseName}.png.png`
+        `images/${baseName}.png`, `images/${baseName}.jpg`, `images/${baseName}.webp`,
+        `${baseName}.png`, `${baseName}.jpg`, `${baseName}.webp`
     ];
-
     let index = 0;
     img.onerror = function() {
         index++;
-        if (index < candidates.length) {
-            img.src = candidates[index];
-        } else {
-            img.onerror = null;
-        }
+        if (index < candidates.length) img.src = candidates[index];
+        else img.onerror = null;
     };
 });
 </script>
